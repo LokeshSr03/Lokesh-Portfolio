@@ -1,5 +1,7 @@
 import React from "react";
 import { Switch } from "@material-tailwind/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon } from "@fortawesome/free-regular-svg-icons/faMoon";
 
 function Header() {
   return (
@@ -10,7 +12,7 @@ function Header() {
 
       <ul className="flex justify-between items-center gap-12 text-header-text font-roboto font-bold">
         <li>
-          <a href="">Home</a>
+          <a href="">Home </a>
         </li>
         <li>
           <a href="">About</a>
