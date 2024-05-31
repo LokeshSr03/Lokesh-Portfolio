@@ -23,22 +23,34 @@ function Header() {
 
       <ul className="flex justify-between items-center gap-12 text-header-text font-roboto font-bold">
         <li>
-          <a href="">Home </a>
+          <a href="" className="hover-text">
+            Home
+          </a>
         </li>
         <li>
-          <a href="">About</a>
+          <a href="" className="hover-text">
+            About
+          </a>
         </li>
         <li>
-          <a href="">Skills</a>
+          <a href="" className="hover-text">
+            Skills
+          </a>
         </li>
         <li>
-          <a href="">Portfolio</a>
+          <a href="" className="hover-text">
+            Portfolio
+          </a>
         </li>
         <li>
-          <a href="">Experience</a>
+          <a href="" className="hover-text">
+            Experience
+          </a>
         </li>
         <li>
-          <a href="">Contact</a>
+          <a href="" className="hover-text">
+            Contact
+          </a>
         </li>
       </ul>
 

@@ -14,3 +14,26 @@
 .light {
   background-color: #d9d9d9;
 }
+
+/* App.css */
+
+.hover-text {
+  position: relative;
+  /* font-size: 2rem; */
+  cursor: pointer;
+}
+
+.hover-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px; /* Adjust the distance from the text */
+  width: 0;
+  height: 2px; /* Adjust the height of the line */
+  background: #d9d9d9; /* Adjust the color of the line */
+  transition: width 0.5s ease;
+}
+
+.hover-text:hover::after {
+  width: 50%; /* Set the width to 50% of the text */
+}
