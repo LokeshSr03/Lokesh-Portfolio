@@ -1,19 +1,14 @@
 import React from "react";
+import { Switch } from "@material-tailwind/react";
 
 function Header() {
   return (
-    <div
-      className="flex justify-between items-center px-8 pr-20"
-      style={{ backgroundColor: "#2C2D31" }}
-    >
-      <div>
-        <img src="/src/assets/Logo.png" className="w-28 h-28" alt="lokesh" />
+    <div className="flex justify-between items-center px-8 pr-16 bg-header-black shadow-high-shadow">
+      <div className="py-4">
+        <img src="/src/assets/Logo.png" className="w-12 h-12 " alt="lokesh" />
       </div>
 
-      <ul
-        className="flex justify-between items-center gap-12 "
-        style={{ color: "#D9D9D9" }}
-      >
+      <ul className="flex justify-between items-center gap-12 text-header-text font-roboto font-bold">
         <li>
           <a href="">Home</a>
         </li>
@@ -33,6 +28,18 @@ function Header() {
           <a href="">Contact</a>
         </li>
       </ul>
+
+      <Switch
+        id="custom-switch-component"
+        ripple={false}
+        className="h-full w-full checked:bg-[#2ec946]"
+        containerProps={{
+          className: "w-11 h-6",
+        }}
+        circleProps={{
+          className: "before:hidden left-0.5 border-none",
+        }}
+      />
     </div>
   );
 }
