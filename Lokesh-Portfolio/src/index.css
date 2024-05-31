@@ -5,3 +5,12 @@
 .flex-all {
   @apply flex items-center;
 }
+
+/* Dark mode  */
+
+.dark {
+  background-color: #31333b;
+}
+.light {
+  background-color: #d9d9d9;
+}
