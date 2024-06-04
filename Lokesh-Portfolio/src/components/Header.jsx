@@ -28,27 +28,42 @@ function Header() {
           </a>
         </li>
         <li>
-          <a href="" className="hover-text">
+          <a
+            href=""
+            className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
+          >
             About
           </a>
         </li>
         <li>
-          <a href="" className="hover-text">
+          <a
+            href=""
+            className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
+          >
             Skills
           </a>
         </li>
         <li>
-          <a href="" className="hover-text">
+          <a
+            href=""
+            className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
+          >
             Portfolio
           </a>
         </li>
         <li>
-          <a href="" className="hover-text">
+          <a
+            href=""
+            className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
+          >
             Experience
           </a>
         </li>
         <li>
-          <a href="" className="hover-text">
+          <a
+            href=""
+            className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
+          >
             Contact
           </a>
         </li>
@@ -57,7 +72,7 @@ function Header() {
       <Switch
         id="custom-switch-component"
         ripple={false}
-        className="h-full w-full bg-[#37474f] checked:bg-[#D9D9D9]"
+        className="h-full w-full bg-[#31333b] checked:bg-[#D9D9D9]"
         containerProps={{
           className: "w-11 h-6",
         }}
