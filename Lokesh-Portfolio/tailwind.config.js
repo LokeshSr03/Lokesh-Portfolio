@@ -11,6 +11,22 @@ module.exports = withMT({
       boxShadow: {
         "high-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
       },
+      screens: {
+        "2xl": { min: "1441px" },
+        // => @media (max-width: 1535px) { ... }
+
+        xl: { max: "1440px" },
+        // => @media (max-width: 1279px) { ... }
+
+        lg: { max: "1150px" },
+        // => @media (max-width: 1023px) { ... }
+
+        md: { max: "960px" },
+        // => @media (max-width: 767px) { ... }
+
+        sm: { max: "639px" },
+        // => @media (max-width: 639px) { ... }
+      },
     },
   },
   plugins: [],
