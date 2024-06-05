@@ -15,6 +15,13 @@ function Header() {
     document.body.className = DarkMode ? "dark" : "light";
     localStorage.setItem("DarkMode", JSON.stringify(DarkMode));
   }, [DarkMode]);
+
+  const getlocal = () => {
+    const darkLocal = localStorage.getItem("DarkMode");
+    const local = darkLocal ? JSON.parse(darkLocal) : true;
+    return local;
+  };
+
   return (
     <div className="flex justify-between items-center px-8 pr-16 bg-header-black shadow-high-shadow">
       <div className="py-4">
@@ -71,8 +78,9 @@ function Header() {
 
       <Switch
         id="custom-switch-component"
+        defaultChecked={getlocal()}
         ripple={false}
-        className="h-full w-full bg-[#31333b] checked:bg-[#D9D9D9]"
+        className="h-full w-full bg-[#D9D9D9] checked:bg-[#31333b]"
         containerProps={{
           className: "w-11 h-6",
         }}

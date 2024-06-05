@@ -1,12 +1,15 @@
 import React from "react";
 import { Bio } from "../data/constants";
+import Typewriter from "typewriter-effect";
+import profile from "../Images/lokesh.jpg";
 
 function HeroSection() {
+  // const darkLocal = localStorage.getItem("DarkMode");
   return (
     <div id="about">
       <div
         id="hero-container"
-        className="bg-[#191924] flex justify-center relative py-20 px-8 md:py-16 md:px-4 sm:py-8 sm:px-4 z-10"
+        className="flex justify-center relative py-20 px-8 md:py-16 md:px-4 sm:py-8 sm:px-4 z-10"
         style={{
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%)",
         }}
@@ -25,11 +28,42 @@ function HeroSection() {
           <div
             id="left"
             className="w-full order-1 md:order-2 md:mb-7 md:flex md:flex-col md:items-center sm:order-2 sm:mb-7 sm:flex sm:flex-col sm:items-center"
-          ></div>
+          >
+            <div
+              id="title"
+              className="font-bold text-4xl text-[#F2F3F4] md:text-center sm:mb-2"
+            >
+              Hi, I am <br /> {Bio.name}
+            </div>
+            <div
+              id="textloop"
+              className="font-semibold text-3xl flex gap-3 text-[#F2F3F4] md:text-center sm:mb-4"
+            >
+              I am a
+              <div id="span" className="text-[#F2F3F4] cursor-pointer">
+                <Typewriter
+                  options={{
+                    strings: Bio.role,
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </div>
+            </div>
+          </div>
           <div
             id="right"
             className="w-full flex order-2 justify-end gap-3 md:order-1 md:justify-center md:items-center md:mb-20 sm:mb-7"
-          ></div>
+          >
+            <img
+              src={profile}
+              alt="lokesh"
+              className="relative w-full h-full max-w-[400px] max-h-[400px] rounded-[50%] md:max-w-[400px] md:max-h-[400px] sm:max-w-[280px] sm:max-h-[280px] "
+              style={{
+                border: "2px solid #be1adb",
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>
