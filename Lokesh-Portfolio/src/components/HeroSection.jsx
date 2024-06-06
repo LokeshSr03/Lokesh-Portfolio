@@ -2,9 +2,13 @@ import React from "react";
 import { Bio } from "../data/constants";
 import Typewriter from "typewriter-effect";
 import profile from "../Images/lokesh.jpg";
+import { useState } from "react";
 
 function HeroSection() {
-  // const darkLocal = localStorage.getItem("DarkMode");
+  const [darkModeEnabled, setDarkModeEnabled] = useState(() => {
+    return JSON.parse(localStorage.getItem("DarkMode") || "true");
+  });
+
   return (
     <div id="about">
       <div
@@ -60,7 +64,7 @@ function HeroSection() {
               alt="lokesh"
               className="relative w-full h-full max-w-[400px] max-h-[400px] rounded-[50%] md:max-w-[400px] md:max-h-[400px] sm:max-w-[280px] sm:max-h-[280px] "
               style={{
-                border: "2px solid #be1adb",
+                border: darkModeEnabled ? "2px solid #be1adb" : "2px solid red",
               }}
             />
           </div>

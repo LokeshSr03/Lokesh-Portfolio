@@ -11,6 +11,7 @@ function Header() {
   const handleDark = () => {
     SetDarkMode(!DarkMode);
   };
+
   useEffect(() => {
     document.body.className = DarkMode ? "dark" : "light";
     localStorage.setItem("DarkMode", JSON.stringify(DarkMode));
