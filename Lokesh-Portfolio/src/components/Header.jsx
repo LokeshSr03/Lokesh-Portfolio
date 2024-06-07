@@ -1,17 +1,10 @@
 import React from "react";
 import { Switch } from "@material-tailwind/react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useDarkMode } from "../global store/DarkModeContext";
 
 function Header() {
-  const [DarkMode, SetDarkMode] = useState(() => {
-    const darkLocal = localStorage.getItem("DarkMode");
-    return darkLocal ? JSON.parse(darkLocal) : true;
-  });
-
-  const handleDark = () => {
-    SetDarkMode(!DarkMode);
-  };
-
+  const { DarkMode, handleDark } = useDarkMode();
   useEffect(() => {
     document.body.className = DarkMode ? "dark" : "light";
     localStorage.setItem("DarkMode", JSON.stringify(DarkMode));
