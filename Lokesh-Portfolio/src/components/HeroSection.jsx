@@ -2,12 +2,10 @@ import React from "react";
 import { Bio } from "../data/constants";
 import Typewriter from "typewriter-effect";
 import profile from "../Images/lokesh.jpg";
-import { useEffect } from "react";
 import { useDarkMode } from "../global store/DarkModeContext";
 
 function HeroSection() {
   const { DarkMode } = useDarkMode();
-
   return (
     <div id="about">
       <div
@@ -34,16 +32,23 @@ function HeroSection() {
           >
             <div
               id="title"
-              className="font-bold text-4xl text-[#F2F3F4] md:text-center sm:mb-2"
+              className="font-bold text-5xl md:text-center sm:mb-2"
+              style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
             >
               Hi, I am <br /> {Bio.name}
             </div>
             <div
               id="textloop"
-              className="font-semibold text-3xl flex gap-3 text-[#F2F3F4] md:text-center sm:mb-4"
+              className="font-semibold text-4xl flex gap-3  md:text-center sm:mb-4"
+              style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
             >
               I am a
-              <div id="span" className="text-[#F2F3F4] cursor-pointer">
+              <div
+                id="span"
+                className={`cursor-pointer ${
+                  DarkMode ? "white-move" : "black-move"
+                }`}
+              >
                 <Typewriter
                   options={{
                     strings: Bio.role,
@@ -61,9 +66,9 @@ function HeroSection() {
             <img
               src={profile}
               alt="lokesh"
-              className="relative w-full h-full max-w-[400px] max-h-[400px] rounded-[50%] md:max-w-[400px] md:max-h-[400px] sm:max-w-[280px] sm:max-h-[280px] "
+              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] md:max-w-[360px] md:max-h-[360px] sm:max-w-[250px] sm:max-h-[250px] "
               style={{
-                border: `2px solid ${DarkMode ? "#be1adb" : "red"}`,
+                border: "2px solid #C2DDF3",
               }}
             />
           </div>

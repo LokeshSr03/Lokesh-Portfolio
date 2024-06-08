@@ -37,3 +37,21 @@
 .hover-text:hover::after {
   width: 50%; /* Set the width to 50% of the text */
 }
+
+.white-move {
+  background: #cfe7fa;
+  background: linear-gradient(to right, #cfe7fa 0%, #6393c1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.black-move {
+  background: #b8e1fc;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #b8e1fc 0%,
+    #31333b 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
