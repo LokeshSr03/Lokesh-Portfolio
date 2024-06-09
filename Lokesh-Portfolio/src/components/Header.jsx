@@ -132,125 +132,93 @@ function Header() {
                   </IconButton>
                 </SpeedDialHandler>
                 <SpeedDialContent className="mt-5 ">
-                  {/* Home  */}
-                  <SpeedDialAction
-                    className="relative "
-                    style={{
-                      background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                      borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                    }}
-                  >
-                    <HomeIcon
-                      className="h-5 w-5"
-                      color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
-                    />
-                    <Typography
-                      {...labelProps}
-                      style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
-                    >
-                      Home
-                    </Typography>
-                  </SpeedDialAction>
-
                   {/* About  */}
-                  <SpeedDialAction
-                    className="relative "
-                    style={{
-                      background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                      borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                    }}
-                  >
-                    <CogIcon
-                      className="h-5 w-5"
-                      color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
-                    />
-                    <Typography
-                      {...labelProps}
-                      style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                  <a href="#about">
+                    <SpeedDialAction
+                      className="relative "
+                      style={{
+                        background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                        borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                      }}
                     >
-                      Settings
-                    </Typography>
-                  </SpeedDialAction>
+                      <CogIcon
+                        className="h-5 w-5"
+                        color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
+                      />
+                      <Typography
+                        {...labelProps}
+                        style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                      >
+                        About
+                      </Typography>
+                    </SpeedDialAction>
+                  </a>
 
                   {/* Skills  */}
-                  <SpeedDialAction
-                    className="relative "
-                    style={{
-                      background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                      borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                    }}
-                  >
-                    <Square3Stack3DIcon
-                      className="h-5 w-5"
-                      color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
-                    />
-                    <Typography
-                      {...labelProps}
-                      style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                  <a href="#about">
+                    <SpeedDialAction
+                      className="relative "
+                      style={{
+                        background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                        borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                      }}
                     >
-                      Pages
-                    </Typography>
-                  </SpeedDialAction>
+                      <CogIcon
+                        className="h-5 w-5"
+                        color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
+                      />
+                      <Typography
+                        {...labelProps}
+                        style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                      >
+                        Skills
+                      </Typography>
+                    </SpeedDialAction>
+                  </a>
 
                   {/* PortFolio  */}
-                  <SpeedDialAction
-                    className="relative "
-                    style={{
-                      background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                      borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                    }}
-                  >
-                    <Square3Stack3DIcon
-                      className="h-5 w-5"
-                      color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
-                    />
-                    <Typography
-                      {...labelProps}
-                      style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                  <a href="#about">
+                    <SpeedDialAction
+                      className="relative "
+                      style={{
+                        background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                        borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                      }}
                     >
-                      Pages
-                    </Typography>
-                  </SpeedDialAction>
+                      <CogIcon
+                        className="h-5 w-5"
+                        color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
+                      />
+                      <Typography
+                        {...labelProps}
+                        style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                      >
+                        Portfolio
+                      </Typography>
+                    </SpeedDialAction>
+                  </a>
 
                   {/* Experience  */}
-                  <SpeedDialAction
-                    className="relative "
-                    style={{
-                      background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                      borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                    }}
-                  >
-                    <Square3Stack3DIcon
-                      className="h-5 w-5"
-                      color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
-                    />
-                    <Typography
-                      {...labelProps}
-                      style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                  <a href="#about">
+                    <SpeedDialAction
+                      className="relative "
+                      style={{
+                        background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                        borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                      }}
                     >
-                      Pages
-                    </Typography>
-                  </SpeedDialAction>
-
-                  {/* Contact  */}
-                  <SpeedDialAction
-                    className="relative "
-                    style={{
-                      background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                      borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                    }}
-                  >
-                    <Square3Stack3DIcon
-                      className="h-5 w-5"
-                      color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
-                    />
-                    <Typography
-                      {...labelProps}
-                      style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
-                    >
-                      Pages
-                    </Typography>
-                  </SpeedDialAction>
+                      <CogIcon
+                        className="h-5 w-5"
+                        color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
+                      />
+                      <Typography
+                        {...labelProps}
+                        style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                      >
+                        Experience
+                      </Typography>
+                    </SpeedDialAction>
+                  </a>
                 </SpeedDialContent>
               </SpeedDial>
             </div>
