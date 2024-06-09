@@ -452,8 +452,8 @@ function HeroSection() {
             </div>
             <Button
               variant="gradient"
-              className="flex items-center gap-3 mt-4"
-              color="blue"
+              className="flex items-center gap-3 mt-4 bg-custom-gradient"
+              color="blue-gray"
             >
               <FaCloudDownloadAlt className="text-xl" />
               Resume
