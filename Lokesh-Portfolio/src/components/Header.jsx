@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch } from "@material-tailwind/react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDarkMode } from "../global store/DarkModeContext";
 import {
   IconButton,
@@ -10,14 +10,15 @@ import {
   SpeedDialAction,
   Typography,
 } from "@material-tailwind/react";
+import { CogIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import {
-  PlusIcon,
-  HomeIcon,
-  CogIcon,
-  Square3Stack3DIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+  faAddressCard,
+  faAddressBook,
+} from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { GiSkills } from "react-icons/gi";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { GrUserExpert } from "react-icons/gr";
 
 function Header() {
   const { DarkMode, handleDark } = useDarkMode();
@@ -52,13 +53,13 @@ function Header() {
 
         <ul className="flex justify-between items-center gap-12 text-header-text font-roboto font-bold md:hidden">
           <li>
-            <a href="" className="hover-text">
+            <a href="#home" className="hover-text">
               Home
             </a>
           </li>
           <li>
             <a
-              href=""
+              href="#about"
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
               About
@@ -66,7 +67,7 @@ function Header() {
           </li>
           <li>
             <a
-              href=""
+              href="#skills"
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
               Skills
@@ -74,7 +75,7 @@ function Header() {
           </li>
           <li>
             <a
-              href=""
+              href="#portfolio"
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
               Portfolio
@@ -82,7 +83,7 @@ function Header() {
           </li>
           <li>
             <a
-              href=""
+              href="#experience"
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
               Experience
@@ -90,7 +91,7 @@ function Header() {
           </li>
           <li>
             <a
-              href=""
+              href="#contact"
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
               Contact
@@ -123,11 +124,11 @@ function Header() {
                   <IconButton size="lg" className="rounded-full">
                     <Bars3Icon
                       className="h-5 w-5 transition-transform group-hover:hidden transition-all duration-2000"
-                      color={`${DarkMode ? "#d9d9d9" : "#31333b"}`}
+                      color={`${DarkMode ? "#fff" : "#31333b"}`}
                     />
                     <XMarkIcon
                       className="hidden h-5 w-5 transition-transform group-hover:block transition-all duration-2000"
-                      color={`${DarkMode ? "#d9d9d9" : "#31333b"}`}
+                      color={`${DarkMode ? "#fff" : "#31333b"}`}
                     />
                   </IconButton>
                 </SpeedDialHandler>
@@ -137,17 +138,19 @@ function Header() {
                     <SpeedDialAction
                       className="relative "
                       style={{
-                        background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                        borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                        background: `${DarkMode ? "#fff" : "#31333b"}`,
+                        borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
                       }}
                     >
-                      <CogIcon
+                      <FontAwesomeIcon
+                        icon={faAddressCard}
                         className="h-5 w-5"
                         color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
                       />
+
                       <Typography
                         {...labelProps}
-                        style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                        style={{ color: `${DarkMode ? "#fff" : "#31333b"}` }}
                       >
                         About
                       </Typography>
@@ -155,21 +158,21 @@ function Header() {
                   </a>
 
                   {/* Skills  */}
-                  <a href="#about">
+                  <a href="#skills">
                     <SpeedDialAction
                       className="relative "
                       style={{
-                        background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                        borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                        background: `${DarkMode ? "#fff" : "#31333b"}`,
+                        borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
                       }}
                     >
-                      <CogIcon
+                      <GiSkills
                         className="h-5 w-5"
                         color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
                       />
                       <Typography
                         {...labelProps}
-                        style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                        style={{ color: `${DarkMode ? "#fff" : "#31333b"}` }}
                       >
                         Skills
                       </Typography>
@@ -177,21 +180,23 @@ function Header() {
                   </a>
 
                   {/* PortFolio  */}
-                  <a href="#about">
+                  <a href="#portfolio">
                     <SpeedDialAction
                       className="relative "
                       style={{
-                        background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                        borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                        background: `${DarkMode ? "#fff" : "#31333b"}`,
+                        borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
                       }}
                     >
-                      <CogIcon
+                      <FontAwesomeIcon
+                        icon={faBriefcase}
                         className="h-5 w-5"
                         color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
                       />
+
                       <Typography
                         {...labelProps}
-                        style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                        style={{ color: `${DarkMode ? "#fff" : "#31333b"}` }}
                       >
                         Portfolio
                       </Typography>
@@ -199,23 +204,47 @@ function Header() {
                   </a>
 
                   {/* Experience  */}
-                  <a href="#about">
+                  <a href="#experience">
                     <SpeedDialAction
                       className="relative "
                       style={{
-                        background: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
-                        borderColor: `${DarkMode ? "#d9d9d9" : "#31333b"}`,
+                        background: `${DarkMode ? "#fff" : "#31333b"}`,
+                        borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
                       }}
                     >
-                      <CogIcon
+                      <GrUserExpert
                         className="h-5 w-5"
                         color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
                       />
                       <Typography
                         {...labelProps}
-                        style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                        style={{ color: `${DarkMode ? "#fff" : "#31333b"}` }}
                       >
                         Experience
+                      </Typography>
+                    </SpeedDialAction>
+                  </a>
+
+                  {/* Contact Us  */}
+                  <a href="#contact">
+                    <SpeedDialAction
+                      className="relative "
+                      style={{
+                        background: `${DarkMode ? "#fff" : "#31333b"}`,
+                        borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
+                      }}
+                    >
+                      <FontAwesomeIcon
+                        icon={faAddressBook}
+                        className="h-5 w-5"
+                        color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
+                      />
+
+                      <Typography
+                        {...labelProps}
+                        style={{ color: `${DarkMode ? "#fff" : "#31333b"}` }}
+                      >
+                        Contact
                       </Typography>
                     </SpeedDialAction>
                   </a>

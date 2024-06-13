@@ -17,10 +17,10 @@ import { Button } from "@material-tailwind/react";
 function HeroSection() {
   const { DarkMode } = useDarkMode();
   return (
-    <div id="about">
+    <div id="home">
       <div
         id="hero-container"
-        className="flex justify-center relative py-20 px-8 md:py-16 md:px-4 sm:py-8 sm:px-4 z-10"
+        className="flex justify-center relative py-20 px-8 md:py-16 md:px-4 sm:py-8 sm:px-4 z-10 mt-12 md:mt-0 sm:mt-0"
         style={{
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%)",
         }}

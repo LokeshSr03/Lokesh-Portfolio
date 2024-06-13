@@ -10,6 +10,7 @@ module.exports = withMT({
       },
       boxShadow: {
         "high-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
+        "skill-shadow": "rgba(23, 92, 230, 0.15) 0px 4px 24px;",
       },
       screens: {
         "2xl": { min: "1441px" },
