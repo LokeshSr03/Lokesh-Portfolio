@@ -1,7 +1,7 @@
 import React from "react";
 import { useDarkMode } from "../global store/DarkModeContext";
 import { skills } from "../data/constants";
-import { SiMongodb } from "react-icons/si";
+import mongodb from "../Images/skills/mongodb.png";
 
 function Skills() {
   const { DarkMode } = useDarkMode();
@@ -17,14 +17,14 @@ function Skills() {
         <div
           id="title"
           className="text-[42px] text-center font-semibold mt-5"
-          style={{ color: `${DarkMode ? "#F2F3F4" : "#111111"}` }}
+          style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           Skills
         </div>
         <div
           id="desc"
           className="text-[18px] text-center max-w-[600px] md:text-[16px]"
-          style={{ color: `${DarkMode ? "#b1b2b3" : "#48494a"}` }}
+          style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           Here are some of my skills on which I have been working
         </div>
@@ -35,9 +35,10 @@ function Skills() {
           {skills.map((skill) => (
             <div
               id="skill"
+              key={skill.title}
               className="w-full max-w-[500px] shadow-skill-shadow rounded-2xl py-[16px] px-9 md:max-w-[400px] md:py-[10px] md:px-9 sm:max-w-[330px] sm:py-[10px] sm:px-9 "
               style={{
-                border: "0.1px solid #854CE6",
+                border: "0.1px solid #C2DDF3",
                 background: `${DarkMode ? "#171721" : "#FFFFFF"}`,
               }}
             >
@@ -55,7 +56,8 @@ function Skills() {
                 {skill.skills.map((item) => (
                   <div
                     id="skillitem"
-                    className="text-[16px] font-semibold rounded-xl py-3 px-4 flex items-center justify-center gap-2 md:text-[14px] md:py-[6px] md:px-3 sm:text-[14px] sm:py-[6px] sm:px-3"
+                    key={item.name}
+                    className="text-[16px] font-semibold rounded-xl py-3 px-4 flex items-center justify-center flex-col gap-2 md:text-[14px] md:py-[6px] md:px-3 sm:text-[14px] sm:py-[6px] sm:px-3 cursor-pointer"
                     style={{
                       color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
                       border: `1px solid ${
@@ -63,8 +65,13 @@ function Skills() {
                       }`,
                     }}
                   >
-                    <SiMongodb color="green" />
-                    Mongodb
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      srcset=""
+                      className="w-6 h-6"
+                    />
+                    <div className="text-xs">{item.name}</div>
                   </div>
                 ))}
               </div>

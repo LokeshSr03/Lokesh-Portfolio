@@ -398,7 +398,7 @@ function HeroSection() {
         >
           <div
             id="left"
-            className="w-full order-1 md:order-2 md:mb-7 md:flex md:flex-col md:items-center sm:order-2 sm:mb-7 sm:flex sm:flex-col sm:items-center"
+            className="w-full order-1 md:order-2 md:mb-7 md:flex md:flex-col md:items-center sm:order-2 sm:mb-7 sm:flex sm:flex-col sm:items-center "
           >
             <div
               id="title"
