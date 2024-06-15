@@ -26,7 +26,7 @@ function About() {
         </div>
         <div
           id="about-desc"
-          className="text-[18px] text-center  md:text-[16px]"
+          className="text-[18px] text-center  md:text-[16px] md:max-w-[90%] sm:max-w-[90%]"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           Dedicated BSc IT student and Full Stack Developer experienced in
