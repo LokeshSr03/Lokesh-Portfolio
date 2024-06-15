@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
@@ -8,6 +9,7 @@ const App = () => {
     <DarkModeProvider>
       <Header />
       <HeroSection />
+      <About />
       <Skills />
     </DarkModeProvider>
   );
