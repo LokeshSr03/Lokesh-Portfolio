@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDarkMode } from "../global store/DarkModeContext";
 import {
   Card,
@@ -7,10 +7,20 @@ import {
   CardFooter,
   Typography,
   Button,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  IconButton,
 } from "@material-tailwind/react";
+import { certificates } from "../data/constants";
 
 function About() {
   const { DarkMode } = useDarkMode();
+
+  const [openCard, setOpenCard] = useState(null);
+
+  const handleOpen = (card) => setOpenCard(openCard === card ? null : card);
+
   return (
     <div
       id="about"
@@ -41,49 +51,75 @@ function About() {
           id="about-box"
           className="flex justify-center items-center flex-wrap gap-10 mt-5"
         >
-          <Card className="mt-6 w-96">
-            <CardHeader color="blue-gray" className="relative h-56">
-              <img
-                src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="card-image"
-              />
-            </CardHeader>
-            <CardBody>
-              <Typography variant="h5" color="blue-gray" className="mb-2">
-                UI/UX Review Check
-              </Typography>
-              <Typography>
-                The place is close to Barceloneta Beach and bus stop just 2 min
-                by walk and near to &quot;Naviglio&quot; where you can enjoy the
-                main night life in Barcelona.
-              </Typography>
-            </CardBody>
-            <CardFooter className="pt-0">
-              <Button>Read More</Button>
-            </CardFooter>
-          </Card>
-
-          <Card className="mt-6 w-96">
-            <CardHeader color="blue-gray" className="relative h-56">
-              <img
-                src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="card-image"
-              />
-            </CardHeader>
-            <CardBody>
-              <Typography variant="h5" color="blue-gray" className="mb-2">
-                UI/UX Review Check
-              </Typography>
-              <Typography>
-                The place is close to Barceloneta Beach and bus stop just 2 min
-                by walk and near to &quot;Naviglio&quot; where you can enjoy the
-                main night life in Barcelona.
-              </Typography>
-            </CardBody>
-            <CardFooter className="pt-0">
-              <Button>Read More</Button>
-            </CardFooter>
-          </Card>
+          {certificates.map((single) => (
+            <div key={single.class}>
+              <Card className="mt-6 w-96">
+                <CardHeader color="blue-gray" className="relative h-56">
+                  <img src={single.image} alt="card-image" />
+                </CardHeader>
+                <CardBody>
+                  <Typography variant="h5" color="blue-gray" className="mb-2">
+                    {single.class}
+                  </Typography>
+                  <Typography>{single.desc}</Typography>
+                </CardBody>
+                <CardFooter className="pt-0">
+                  <Button onClick={() => handleOpen(single.class)}>
+                    Certificate
+                  </Button>
+                </CardFooter>
+              </Card>
+              <Dialog
+                size="xl"
+                open={openCard === single.class}
+                handler={() => handleOpen(single.class)}
+              >
+                <DialogHeader className="justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="-mt-px flex flex-col">
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-medium"
+                      >
+                        {single.class}
+                      </Typography>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <IconButton
+                      color="blue-gray"
+                      size="sm"
+                      variant="text"
+                      onClick={() => handleOpen(single.class)}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        className="h-5 w-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </IconButton>
+                  </div>
+                </DialogHeader>
+                <DialogBody>
+                  <img
+                    alt="nature"
+                    className="h-[33rem] w-full rounded-lg object-cover object-center"
+                    src={single.certificate}
+                  />
+                </DialogBody>
+              </Dialog>
+            </div>
+          ))}
         </div>
       </div>
     </div>

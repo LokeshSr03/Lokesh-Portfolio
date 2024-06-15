@@ -1,7 +1,6 @@
 import React from "react";
 import { useDarkMode } from "../global store/DarkModeContext";
 import { skills } from "../data/constants";
-import mongodb from "../Images/skills/mongodb.png";
 
 function Skills() {
   const { DarkMode } = useDarkMode();
