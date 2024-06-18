@@ -53,12 +53,25 @@ function About() {
         >
           {certificates.map((single) => (
             <div key={single.class}>
-              <Card className="mt-6 w-96">
-                <CardHeader color="blue-gray" className="relative h-56">
-                  <img src={single.image} alt="card-image" />
+              <Card
+                className="mt-6 w-96 "
+                style={{ background: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+              >
+                <CardHeader
+                  color="blue-gray"
+                  className="relative h-56 flex justify-center items-center"
+                >
+                  <img
+                    src={single.image}
+                    alt="card-image"
+                    className="h-[249px] w-[249px]"
+                  />
                 </CardHeader>
-                <CardBody>
-                  <Typography variant="h5" color="blue-gray" className="mb-2">
+                <CardBody
+                  className="min-h-[215px]"
+                  style={{ color: `${DarkMode ? "#31333b" : "#d9d9d9"}` }}
+                >
+                  <Typography variant="h5" className="mb-2">
                     {single.class}
                   </Typography>
                   <Typography>{single.desc}</Typography>
@@ -110,10 +123,10 @@ function About() {
                     </IconButton>
                   </div>
                 </DialogHeader>
-                <DialogBody>
+                <DialogBody className="flex justify-center items-center">
                   <img
                     alt="nature"
-                    className="h-[33rem] w-full rounded-lg object-cover object-center"
+                    className="h-[35rem] md:h-auto sm:h-auto rounded-lg object-cover object-center"
                     src={single.certificate}
                   />
                 </DialogBody>

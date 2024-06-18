@@ -3,7 +3,7 @@ export const Bio = {
   role: ["Full Stack Developer", "Front End Developer", "Back End Developer"],
   github: "https://github.com/LokeshSr03",
   resume:
-    "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
+    "https://drive.google.com/file/d/1vtV99_0bzp1IKtC0ksRmZEyMcnqyU4J8/view",
   linkedin: "https://www.linkedin.com/in/lokeshsuthar03/",
   insta: "https://www.instagram.com/lokesh.sr.03/",
   facebook: "https://www.facebook.com/lokesh.suthar.73744",
