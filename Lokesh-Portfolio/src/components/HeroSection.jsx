@@ -27,7 +27,7 @@ function HeroSection() {
       >
         <div
           id="hero-bg"
-          className="absolute flex justify-end top-0 right-0 bottom-0 left-0 w-full h-full max-w-[1350px] overflow-hidden py-0 px-8 top-1/2 left-1/2 md:justify-center md:p-0"
+          className="absolute flex justify-end  right-0 bottom-0  w-full h-full max-w-[1350px] overflow-hidden py-0 px-8 top-1/2 left-1/2 md:justify-center md:p-0"
           style={{
             transform: "translateX(-50%) translateY(-50%)",
           }}

@@ -58,7 +58,7 @@ function About() {
                 style={{ background: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
               >
                 <CardHeader
-                  color="blue-gray"
+                  style={{ background: "rgb(111,135,147)" }}
                   className="relative h-56 flex justify-center items-center"
                 >
                   <img
