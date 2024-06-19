@@ -10,7 +10,7 @@ import {
   SpeedDialAction,
   Typography,
 } from "@material-tailwind/react";
-import { CogIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import {
   faAddressCard,
   faAddressBook,
