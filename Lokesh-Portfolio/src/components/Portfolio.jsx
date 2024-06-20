@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDarkMode } from "../global store/DarkModeContext";
 import {
   Carousel,
@@ -10,15 +10,25 @@ import {
   CardFooter,
   Tooltip,
   IconButton,
+  Dialog,
+  DialogHeader,
+  DialogBody,
 } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faJs } from "@fortawesome/free-brands-svg-icons";
 import { PhotoIcon } from "@heroicons/react/24/solid";
+import { FaGithubSquare } from "react-icons/fa";
+import { Project } from "../data/constants";
 
 function Portfolio() {
   const { DarkMode } = useDarkMode();
   const screenwidth = window.innerWidth;
   const breakpoint = 960;
+  const [openCard, setOpenCard] = useState(null);
+  const handleOpen = (card) => setOpenCard(openCard === card ? null : card);
+  const [active, setActive] = useState(
+    "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+  );
   if (screenwidth < breakpoint) {
     return (
       <div
@@ -224,88 +234,167 @@ function Portfolio() {
             Big Portfolio
           </div>
           <div className="flex justify-center items-center gap-7">
-            <Card className="w-96">
-              <CardHeader floated={false} className="h-80">
-                <img
-                  src="https://docs.material-tailwind.com/img/team-3.jpg"
-                  alt="profile-picture"
-                />
-              </CardHeader>
-              <CardBody className="text-center pb-0">
-                <Typography variant="h4" color="blue-gray" className="mb-2">
-                  Natalie Paisley
-                </Typography>
-              </CardBody>
-              <CardFooter className="flex justify-center gap-7 pt-2">
-                <Tooltip content="Javascript">
-                  <FontAwesomeIcon
-                    icon={faJs}
-                    style={{ color: "#d76e42" }}
-                    className="cursor-pointer"
-                  />
-                </Tooltip>
-                <Tooltip content="Follow">
-                  <Typography
-                    as="a"
-                    href="#twitter"
-                    variant="lead"
-                    color="light-blue"
-                    textGradient
-                  >
-                    <i className="fab fa-twitter" />
-                  </Typography>
-                </Tooltip>
-                <Tooltip content="Follow">
-                  <Typography
-                    as="a"
-                    href="#instagram"
-                    variant="lead"
-                    color="purple"
-                    textGradient
-                  >
-                    <i className="fab fa-instagram" />
-                  </Typography>
-                </Tooltip>
-              </CardFooter>
-              <CardFooter className="pt-0">
-                <a href="#" className="inline-block">
-                  <Button
-                    size="sm"
-                    variant="text"
-                    className="flex items-center gap-2"
-                  >
-                    Gallery
-                    <PhotoIcon
-                      className="hidden h-5 w-5 transition-transform group-hover:block transition-all duration-2000"
-                      color={`${DarkMode ? "red" : "#blue "}`}
+            {Project.map((single) => (
+              <div key={single.Pname}>
+                <Card
+                  className="w-80"
+                  style={{
+                    background: `${DarkMode ? "#171721" : "#FFFFFF"}`,
+                  }}
+                >
+                  <CardHeader floated={false} className="h-60 w-70">
+                    <img
+                      src="https://docs.material-tailwind.com/img/team-3.jpg"
+                      alt="profile-picture"
                     />
-                  </Button>
-                </a>
-                <a href="#" className="inline-block">
-                  <Button
-                    size="sm"
-                    variant="text"
-                    className="flex items-center gap-2"
-                  >
-                    Github
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="h-4 w-4"
+                  </CardHeader>
+                  <CardBody className="text-center pb-0">
+                    <Typography
+                      variant="h4"
+                      color="blue-gray"
+                      className="mb-2"
+                      style={{
+                        color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
+                      }}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                      {single.Pname}
+                    </Typography>
+                  </CardBody>
+                  <CardFooter className="flex justify-center gap-7 pt-2">
+                    <Tooltip content="Javascript">
+                      <FontAwesomeIcon
+                        icon={faJs}
+                        style={{ color: "#d76e42" }}
+                        className="cursor-pointer"
                       />
-                    </svg>
-                  </Button>
-                </a>
-              </CardFooter>
-            </Card>
+                    </Tooltip>
+                    <Tooltip content="Follow">
+                      <Typography
+                        as="a"
+                        href="#twitter"
+                        variant="lead"
+                        color="light-blue"
+                        textGradient
+                      >
+                        <i className="fab fa-twitter" />
+                      </Typography>
+                    </Tooltip>
+                    <Tooltip content="Follow">
+                      <Typography
+                        as="a"
+                        href="#instagram"
+                        variant="lead"
+                        color="purple"
+                        textGradient
+                      >
+                        <i className="fab fa-instagram" />
+                      </Typography>
+                    </Tooltip>
+                  </CardFooter>
+                  <CardFooter className="pt-0 flex justify-center gap-3 items-center flex-wrap ">
+                    <Button
+                      size="sm"
+                      variant="text"
+                      className="flex items-center gap-2"
+                      style={{
+                        color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
+                      }}
+                      onClick={() => handleOpen(single.Pname)}
+                    >
+                      Gallery
+                      <PhotoIcon
+                        className="h-5 w-5 transition-transform group-hover:hidden transition-all duration-2000"
+                        color={`${DarkMode ? "#fff" : "#31333b"}`}
+                      />
+                    </Button>
+
+                    <a href={single.Pgithub} className="inline-block">
+                      <Button
+                        size="sm"
+                        variant="text"
+                        className="flex items-center gap-2"
+                        style={{
+                          color: `${
+                            DarkMode ? "#F2F3F4" + 80 : "#111111" + 80
+                          }`,
+                        }}
+                      >
+                        Github
+                        <FaGithubSquare
+                          className="h-5 w-5"
+                          color={`${DarkMode ? "#fff" : "#31333b"}`}
+                        />
+                      </Button>
+                    </a>
+                  </CardFooter>
+                </Card>
+                <Dialog
+                  size="xl"
+                  open={openCard === single.Pname}
+                  handler={() => handleOpen(single.Pname)}
+                >
+                  <DialogHeader className="justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="-mt-px flex flex-col">
+                        <Typography
+                          variant="small"
+                          color="blue-gray"
+                          className="font-medium"
+                        >
+                          {single.Pname}
+                        </Typography>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <IconButton
+                        color="blue-gray"
+                        size="sm"
+                        variant="text"
+                        onClick={() => handleOpen(single.Pname)}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          className="h-5 w-5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </IconButton>
+                    </div>
+                  </DialogHeader>
+                  <DialogBody className="flex justify-center items-center">
+                    <div className="grid gap-4">
+                      <div>
+                        <img
+                          className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[480px]"
+                          src={active}
+                          alt=""
+                        />
+                      </div>
+                      <div className="grid grid-cols-5 gap-4">
+                        {single.Pgallery.map(({ imgelink }, index) => (
+                          <div key={index}>
+                            <img
+                              onClick={() => setActive(imgelink)}
+                              src={imgelink}
+                              className="h-20 max-w-full cursor-pointer rounded-lg object-cover object-center"
+                              alt="gallery-image"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </DialogBody>
+                </Dialog>
+              </div>
+            ))}
           </div>
         </div>
       </div>
