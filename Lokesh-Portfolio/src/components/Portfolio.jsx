@@ -227,11 +227,19 @@ function Portfolio() {
       >
         <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col">
           <div
-            id="abouttitle"
+            id="porttitle"
             className="text-[42px] text-center font-semibold mt-5"
             style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
           >
-            Big Portfolio
+            Project
+          </div>
+          <div
+            id="desc"
+            className="text-[18px] text-center max-w-[600px] md:text-[16px]"
+            style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+          >
+            I have worked on a wide range of projects.Here are some of my
+            projects.
           </div>
           <div className="flex justify-center items-center gap-7">
             {Project.map((single) => (
@@ -295,7 +303,7 @@ function Portfolio() {
                     <Button
                       size="sm"
                       variant="text"
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 hover:bg-[#a6b8c1]"
                       style={{
                         color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
                       }}
@@ -312,7 +320,7 @@ function Portfolio() {
                       <Button
                         size="sm"
                         variant="text"
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 hover:bg-[#a6b8c1]"
                         style={{
                           color: `${
                             DarkMode ? "#F2F3F4" + 80 : "#111111" + 80
@@ -332,8 +340,9 @@ function Portfolio() {
                   size="xl"
                   open={openCard === single.Pname}
                   handler={() => handleOpen(single.Pname)}
+                  style={{ background: "#d9d9d9" }}
                 >
-                  <DialogHeader className="justify-between">
+                  <DialogHeader className="justify-between pb-0">
                     <div className="flex items-center gap-3">
                       <div className="-mt-px flex flex-col">
                         <Typography
@@ -373,7 +382,7 @@ function Portfolio() {
                     <div className="grid gap-4">
                       <div>
                         <img
-                          className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[480px]"
+                          className=" h-[33rem] w-[50rem]  md:h-auto sm:h-auto rounded-lg object-cover object-center"
                           src={active}
                           alt=""
                         />
