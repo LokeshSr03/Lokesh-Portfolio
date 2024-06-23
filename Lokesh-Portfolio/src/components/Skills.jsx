@@ -64,12 +64,7 @@ function Skills() {
                       }`,
                     }}
                   >
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      srcset=""
-                      className="w-6 h-6"
-                    />
+                    <img src={item.image} alt={item.name} className="w-6 h-6" />
                     <div className="text-xs">{item.name}</div>
                   </div>
                 ))}

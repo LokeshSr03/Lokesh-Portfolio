@@ -15,7 +15,7 @@ import {
   DialogBody,
 } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faJs } from "@fortawesome/free-brands-svg-icons";
+
 import { PhotoIcon } from "@heroicons/react/24/solid";
 import { FaGithubSquare } from "react-icons/fa";
 import { Project } from "../data/constants";
@@ -269,35 +269,16 @@ function Portfolio() {
                     </Typography>
                   </CardBody>
                   <CardFooter className="flex justify-center gap-7 pt-2">
-                    <Tooltip content="Javascript">
-                      <FontAwesomeIcon
-                        icon={faJs}
-                        style={{ color: "#d76e42" }}
-                        className="cursor-pointer"
-                      />
-                    </Tooltip>
-                    <Tooltip content="Follow">
-                      <Typography
-                        as="a"
-                        href="#twitter"
-                        variant="lead"
-                        color="light-blue"
-                        textGradient
-                      >
-                        <i className="fab fa-twitter" />
-                      </Typography>
-                    </Tooltip>
-                    <Tooltip content="Follow">
-                      <Typography
-                        as="a"
-                        href="#instagram"
-                        variant="lead"
-                        color="purple"
-                        textGradient
-                      >
-                        <i className="fab fa-instagram" />
-                      </Typography>
-                    </Tooltip>
+                    {single.Picon.map((ic, index) => (
+                      <Tooltip key={index} content={ic.name}>
+                        <FontAwesomeIcon
+                          icon={ic.ico}
+                          style={{ color: ic.icocolor }}
+                          className="cursor-pointer"
+                        />
+                        <ic.reactico />
+                      </Tooltip>
+                    ))}
                   </CardFooter>
                   <CardFooter className="pt-0 flex justify-center gap-3 items-center flex-wrap ">
                     <Button

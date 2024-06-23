@@ -1,3 +1,12 @@
+import {
+  faJs,
+  faHtml5,
+  faCss3,
+  faReact,
+  faNodeJs,
+} from "@fortawesome/free-brands-svg-icons";
+import { SiCsharp } from "react-icons/si";
+
 export const Bio = {
   name: "Lokesh Suthar",
   role: ["Full Stack Developer", "Front End Developer", "Back End Developer"],
@@ -155,6 +164,39 @@ export const Project = [
   {
     Pimage: "/src/Images/class/rstclass.png",
     Pname: "RST-Store",
+    Picon: [
+      {
+        name: "HTML5",
+        ico: faHtml5,
+        icocolor: "red",
+        reactico: SiCsharp,
+      },
+      {
+        name: "CSS3",
+        ico: faCss3,
+        icocolor: "red",
+        reactico: SiCsharp,
+      },
+      {
+        name: "React.js",
+        ico: faReact,
+        icocolor: "red",
+        reactico: SiCsharp,
+      },
+
+      {
+        name: "Node.js",
+        ico: faNodeJs,
+        icocolor: "red",
+        reactico: SiCsharp,
+      },
+      {
+        name: "JavaScript",
+        ico: faJs,
+        icocolor: "pink",
+        reactico: SiCsharp,
+      },
+    ],
     Pgithub: "#",
     Pgallery: [
       {
@@ -182,6 +224,14 @@ export const Project = [
   {
     Pimage: "/src/Images/class/rstclass.png",
     Pname: "Portfolio",
+    Picon: [
+      {
+        name: "JavaScript",
+        ico: faJs,
+        icocolor: "pink",
+        reactico: SiCsharp,
+      },
+    ],
     Pgithub: "#",
     Pgallery: [
       {
