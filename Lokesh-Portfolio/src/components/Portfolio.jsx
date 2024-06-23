@@ -241,7 +241,7 @@ function Portfolio() {
             I have worked on a wide range of projects.Here are some of my
             projects.
           </div>
-          <div className="flex justify-center items-center gap-7">
+          <div className="flex justify-center items-center gap-12">
             {Project.map((single) => (
               <div key={single.Pname}>
                 <Card
@@ -268,15 +268,14 @@ function Portfolio() {
                       {single.Pname}
                     </Typography>
                   </CardBody>
-                  <CardFooter className="flex justify-center gap-7 pt-2">
+                  <CardFooter className="flex justify-center gap-7 pt-2 flex-wrap">
                     {single.Picon.map((ic, index) => (
                       <Tooltip key={index} content={ic.name}>
-                        <FontAwesomeIcon
-                          icon={ic.ico}
-                          style={{ color: ic.icocolor }}
-                          className="cursor-pointer"
+                        <img
+                          src={ic.ico}
+                          alt={ic.name}
+                          className="w-4 h-4 cursor-pointer"
                         />
-                        <ic.reactico />
                       </Tooltip>
                     ))}
                   </CardFooter>
