@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import Portfolio from "./components/Portfolio";
@@ -13,6 +14,7 @@ const App = () => {
       <About />
       <Skills />
       <Portfolio />
+      <Experience />
     </DarkModeProvider>
   );
 };
