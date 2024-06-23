@@ -1,12 +1,3 @@
-import {
-  faJs,
-  faHtml5,
-  faCss3,
-  faReact,
-  faNodeJs,
-} from "@fortawesome/free-brands-svg-icons";
-import { SiCsharp } from "react-icons/si";
-
 export const Bio = {
   name: "Lokesh Suthar",
   role: ["Full Stack Developer", "Front End Developer", "Back End Developer"],

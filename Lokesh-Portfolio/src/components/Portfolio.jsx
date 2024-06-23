@@ -14,8 +14,6 @@ import {
   DialogHeader,
   DialogBody,
 } from "@material-tailwind/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { PhotoIcon } from "@heroicons/react/24/solid";
 import { FaGithubSquare } from "react-icons/fa";
 import { Project } from "../data/constants";
@@ -37,11 +35,19 @@ function Portfolio() {
       >
         <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col">
           <div
-            id="abouttitle"
+            id="porttitle"
             className="text-[42px] text-center font-semibold mt-5"
             style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
           >
-            Portfolio
+            Project
+          </div>
+          <div
+            id="desc"
+            className="text-[18px] text-center max-w-[600px] md:text-[16px]"
+            style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+          >
+            I have worked on a wide range of projects.Here are some of my
+            projects.
           </div>
           <Carousel className="rounded-xl" navigation={false} autoplay loop>
             {Project.map((single) => (
