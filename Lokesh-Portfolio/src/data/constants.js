@@ -269,3 +269,17 @@ export const Project = [
     ],
   },
 ];
+
+export const experiences = [
+  {
+    image: "/src/Images/bridgekash.png",
+    role: "Front-end Developer (Internship)",
+    company: "Bridgekash International Pvt . Ltd",
+    date: "Jan 2024 - April 2024",
+    points: [
+      "Gained comprehensive understanding of web development processes and methodologies through practical experience.",
+      "Developed proficiency in troubleshooting and debugging code, enhancing skills in JavaScript.",
+      "Demonstrated expertise in designing and developing websites from scratch, including logic implementation, to meet project specifications and enhance user experience.",
+    ],
+  },
+];
