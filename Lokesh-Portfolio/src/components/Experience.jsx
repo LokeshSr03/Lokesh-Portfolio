@@ -2,13 +2,11 @@ import React from "react";
 import {
   Timeline,
   TimelineItem,
-  TimelineConnector,
   TimelineIcon,
   Typography,
   TimelineHeader,
   TimelineBody,
 } from "@material-tailwind/react";
-import { BellIcon } from "@heroicons/react/24/solid";
 import { useDarkMode } from "../global store/DarkModeContext";
 import { experiences } from "../data/constants";
 
