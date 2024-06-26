@@ -75,18 +75,18 @@ function Header() {
           </li>
           <li>
             <a
-              href="#portfolio"
+              href="#projects"
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
-              Portfolio
+              Projects
             </a>
           </li>
           <li>
             <a
-              href="#experience"
+              href="#experiences"
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
-              Experience
+              Experiences
             </a>
           </li>
           <li>

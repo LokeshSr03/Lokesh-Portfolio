@@ -1,14 +1,11 @@
 import React, { useRef, useState } from "react";
 import { useDarkMode } from "../global store/DarkModeContext";
-import {
-  Button,
-  Popover,
-  PopoverHandler,
-  PopoverContent,
-} from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import { IoIosSend } from "react-icons/io";
+import { Snackbar } from "@mui/material";
 
 function Contact() {
+  const [open, setOpen] = useState(false);
   const form = useRef();
   const { DarkMode } = useDarkMode();
   const handleSubmit = (e) => {
@@ -36,8 +33,7 @@ function Contact() {
         </div>
 
         <form
-          className="w-[95%] max-w-[600px] flex flex-col p-8 rounded-2xl mt-7 gap-3
-        "
+          className="w-[80%] max-w-[600px] flex flex-col p-8 rounded-2xl mt-7 gap-3"
           style={{
             background: `${DarkMode ? "#171721" : "#FFFFFF"}`,
             boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
@@ -94,6 +90,13 @@ function Contact() {
             Send
           </Button>
         </form>
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={() => setOpen(false)}
+          message="Email sent successfully!"
+          severity="success"
+        />
       </div>
     </div>
   );

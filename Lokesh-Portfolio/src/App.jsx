@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
+import Footer from "./components/Footer";
 import { DarkModeProvider } from "./global store/DarkModeContext";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Portfolio />
       <Experience />
       <Contact />
+      <Footer />
     </DarkModeProvider>
   );
 };
