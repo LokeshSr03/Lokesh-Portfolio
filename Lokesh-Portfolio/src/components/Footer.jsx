@@ -95,7 +95,7 @@ function Footer() {
           </a>
         </div>
         <p className="mt-[1.5rem] text-[0.9rem] text-center ">
-          &copy; 2024 Rishav Chanda. All rights reserved.
+          &copy; 2024 Lokesh Suthar. All rights reserved.
         </p>
       </footer>
     </div>

@@ -21,9 +21,11 @@ function HeroSection() {
       <div
         id="hero-container"
         className="flex justify-center relative py-20 px-8 md:py-16 md:px-4 sm:py-8 sm:px-4 z-10 mt-12 md:mt-0 sm:mt-0"
-        style={{
-          clipPath: "polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%)",
-        }}
+        // style={{
+        //   clipPath: "polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%)",
+        //   background:
+        //     "linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%)",
+        // }}
       >
         <div
           id="hero-bg"

@@ -15,8 +15,13 @@ function Contact() {
     <div
       id="about"
       className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0"
+      style={{
+        clipPath: "polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%)",
+        background:
+          "linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%)",
+      }}
     >
-      <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col">
+      <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col mb-16">
         <div
           id="porttitle"
           className="text-[42px] text-center font-semibold mt-5"
