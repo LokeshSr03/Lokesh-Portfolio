@@ -177,38 +177,33 @@ export const Project = [
         name: "JavaScript",
         ico: "/src/Images/skills/js.png",
       },
-    ],
-    Pgithub: "#",
-    Pgallery: [
       {
-        imgelink:
-          "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        name: "Create-react-app",
+        ico: "/src/Images/skills/create.png",
       },
       {
-        imgelink:
-          "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+        name: "Chakra-UI",
+        ico: "/src/Images/skills/chakra.png",
       },
       {
-        imgelink:
-          "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+        name: "Postman",
+        ico: "/src/Images/skills/postman.png",
       },
       {
-        imgelink:
-          "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+        name: "JWT",
+        ico: "/src/Images/skills/jwt.png",
       },
       {
-        imgelink:
-          "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+        name: "Express JS",
+        ico: "/src/Images/skills/express.png",
       },
-    ],
-  },
-  {
-    Pimage: "/src/Images/class/rstclass.png",
-    Pname: "Portfolio",
-    Picon: [
       {
-        name: "JavaScript",
-        ico: "/src/Images/skills/js.png",
+        name: "MongoDB",
+        ico: "/src/Images/skills/mongodb.png",
+      },
+      {
+        name: "Redux",
+        ico: "/src/Images/skills/redux.png",
       },
     ],
     Pgithub: "#",
@@ -240,8 +235,93 @@ export const Project = [
     Pname: "Portfolio",
     Picon: [
       {
+        name: "HTML5",
+        ico: "/src/Images/skills/html.png",
+      },
+      {
+        name: "CSS3",
+        ico: "/src/Images/skills/css.png",
+      },
+      {
+        name: "React.js",
+        ico: "/src/Images/skills/react.png",
+      },
+      {
         name: "JavaScript",
         ico: "/src/Images/skills/js.png",
+      },
+      {
+        name: "Vite",
+        ico: "/src/Images/skills/vite.png",
+      },
+      {
+        name: "Tailwind Css",
+        ico: "/src/Images/skills/tailwind.png",
+      },
+      {
+        name: "Netlify",
+        ico: "/src/Images/skills/netlify.png",
+      },
+      {
+        name: "Babel",
+        ico: "/src/Images/skills/babel.png",
+      },
+    ],
+    Pgithub: "#",
+    Pgallery: [
+      {
+        imgelink:
+          "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      },
+      {
+        imgelink:
+          "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      },
+      {
+        imgelink:
+          "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+      },
+      {
+        imgelink:
+          "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+      },
+      {
+        imgelink:
+          "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+      },
+    ],
+  },
+  {
+    Pimage: "/src/Images/class/rstclass.png",
+    Pname: "E-Waste-Management",
+    Picon: [
+      {
+        name: "HTML",
+        ico: "/src/Images/skills/html.png",
+      },
+      {
+        name: "CSS",
+        ico: "/src/Images/skills/css.png",
+      },
+      {
+        name: "JavaScript",
+        ico: "/src/Images/skills/js.png",
+      },
+      {
+        name: "Asp.net",
+        ico: "/src/Images/skills/asp.png",
+      },
+      {
+        name: "C#",
+        ico: "/src/Images/skills/csharp.png",
+      },
+      {
+        name: "MySQL",
+        ico: "/src/Images/skills/mysql.png",
+      },
+      {
+        name: "GitHub",
+        ico: "/src/Images/skills/github.png",
       },
     ],
     Pgithub: "#",
@@ -271,21 +351,21 @@ export const Project = [
 ];
 export const Educations = [
   {
-    image: "/src/Images/bridgekash.png",
+    image: "/src/Images/education/graduation.png",
     course: "Bachelor of Science in Information Technology (BSC.IT)",
     college:
       "Guru Nanak Khalsa College of Arts, Science and Commerce Matunga , Mumbai-19",
     date: "2020 - 2023",
   },
   {
-    image: "/src/Images/bridgekash.png",
+    image: "/src/Images/education/university.png",
     course: "Higher Secondary Certificate (HSC)",
     college:
       "Guru Nanak Khalsa College of Arts, Science and Commerce Matunga , Mumbai-19",
     date: "2018 - April 2020",
   },
   {
-    image: "/src/Images/bridgekash.png",
+    image: "/src/Images/education/school.png",
     course: "Secondary school certificate (SSC)",
     college: "Central Railway High School , Lower-Parel Mumbai-12",
     date: "2006 - 2018",

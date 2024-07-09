@@ -49,28 +49,35 @@ function Education() {
                     <img
                       src={edu.image}
                       alt={edu.college}
-                      className="w-5 h-5"
+                      className="h-5 w-5"
+                      style={{
+                        filter: `${
+                          DarkMode
+                            ? "brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(156deg) brightness(110%) contrast(105%)"
+                            : ""
+                        }`,
+                      }}
                     />
                   </TimelineIcon>
                   <div className="flex flex-col gap-1">
                     <Typography
                       variant="h5"
                       // color="blue-gray"
-                      className="text-[20px] md:text-[16px]"
+                      className="text-[20px] md:text-[14px]"
                     >
                       {edu.course}
                     </Typography>
                     <Typography
                       variant="h6"
                       // color="blue-gray"
-                      className="text-[18px] md:text-[14px]"
+                      className="text-[18px] md:text-[12px]"
                     >
                       {edu.college}
                     </Typography>
                     <Typography
                       variant="small"
                       // color="gray"
-                      className="font-normal text-[16px] md:text-[12px]"
+                      className="font-normal text-[16px] md:text-[10px]"
                     >
                       {edu.date}
                     </Typography>

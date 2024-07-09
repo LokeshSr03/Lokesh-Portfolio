@@ -55,7 +55,9 @@ function About() {
             <div key={single.class}>
               <Card
                 className="mt-6 w-96 "
-                style={{ background: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+                style={{
+                  background: `${DarkMode ? "#171721" : "#ffffff"}`,
+                }}
               >
                 <CardHeader
                   style={{ background: "rgb(111,135,147)" }}
@@ -69,7 +71,7 @@ function About() {
                 </CardHeader>
                 <CardBody
                   className="min-h-[215px]"
-                  style={{ color: `${DarkMode ? "#31333b" : "#d9d9d9"}` }}
+                  style={{ color: `${DarkMode ? "#84858A" : "#888888"}` }}
                 >
                   <Typography variant="h5" className="mb-2">
                     {single.class}
@@ -77,7 +79,12 @@ function About() {
                   <Typography>{single.desc}</Typography>
                 </CardBody>
                 <CardFooter className="pt-0">
-                  <Button onClick={() => handleOpen(single.class)}>
+                  <Button
+                    variant="gradient"
+                    className="flex items-center gap-3 bg-custom-gradient"
+                    color="blue-gray"
+                    onClick={() => handleOpen(single.class)}
+                  >
                     Certificate
                   </Button>
                 </CardFooter>

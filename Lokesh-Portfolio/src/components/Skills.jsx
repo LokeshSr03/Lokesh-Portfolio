@@ -44,7 +44,9 @@ function Skills() {
               <h2
                 id="skilltitle"
                 className="text-[28px] font-semibold mb-5 text-center"
-                style={{ color: `${DarkMode ? "#b1b2b3" : "#48494a"}` }}
+                style={{
+                  color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
+                }}
               >
                 {skill.title}
               </h2>
