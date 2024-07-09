@@ -43,7 +43,7 @@ function Portfolio() {
           </div>
           <div
             id="desc"
-            className="text-[18px] text-center max-w-[600px] md:text-[16px]"
+            className="text-[18px] text-center max-w-[600px] md:text-[16px] md:max-w-[420px]"
             style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
           >
             I have worked on a wide range of projects.Here are some of my
@@ -202,7 +202,7 @@ function Portfolio() {
   } else {
     return (
       <div
-        id="about"
+        id="project"
         className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0"
       >
         <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col">
@@ -211,7 +211,7 @@ function Portfolio() {
             className="text-[42px] text-center font-semibold mt-5"
             style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
           >
-            Project
+            Projects
           </div>
           <div
             id="desc"

@@ -13,7 +13,7 @@ function Contact() {
   };
   return (
     <div
-      id="about"
+      id="contact"
       className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0"
       style={{
         clipPath: "polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%)",
@@ -31,7 +31,7 @@ function Contact() {
         </div>
         <div
           id="desc"
-          className="text-[18px] text-center max-w-[600px] md:text-[16px] md:max-w-[500px]"
+          className="text-[18px] text-center max-w-[600px] md:text-[16px] md:max-w-[420px]"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           Feel free to reach out to me for any questions or opportunities!

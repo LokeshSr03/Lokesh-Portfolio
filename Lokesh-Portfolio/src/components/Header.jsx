@@ -48,12 +48,21 @@ function Header() {
         className="flex justify-between items-center px-8  bg-header-black shadow-high-shadow"
       >
         <div className="py-4">
-          <img src="/src/assets/Logo.png" className="w-12 h-12 " alt="lokesh" />
+          <a href="#home">
+            <img
+              src="/src/assets/Logo.png"
+              className="w-12 h-12 "
+              alt="lokesh"
+            />
+          </a>
         </div>
 
         <ul className="flex justify-between items-center gap-12 text-header-text font-roboto font-bold md:hidden">
           <li>
-            <a href="#home" className="hover-text">
+            <a
+              href="#home"
+              className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
+            >
               Home
             </a>
           </li>
@@ -75,7 +84,7 @@ function Header() {
           </li>
           <li>
             <a
-              href="#projects"
+              href="#project"
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
               Projects
@@ -83,10 +92,10 @@ function Header() {
           </li>
           <li>
             <a
-              href="#experiences"
+              href="#experience"
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
-              Experiences
+              Experience
             </a>
           </li>
           <li>

@@ -5,12 +5,11 @@ import {
   TimelineIcon,
   Typography,
   TimelineHeader,
-  TimelineBody,
 } from "@material-tailwind/react";
 import { useDarkMode } from "../global store/DarkModeContext";
-import { experiences } from "../data/constants";
+import { Educations } from "../data/constants";
 
-export default function Experience() {
+function Education() {
   const { DarkMode } = useDarkMode();
   return (
     <div
@@ -23,24 +22,23 @@ export default function Experience() {
           className="text-[42px] text-center font-semibold mt-5"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
-          Experience
+          Education
         </div>
         <div
           id="desc"
           className="text-[18px] text-center max-w-[600px] md:text-[16px] md:max-w-[420px]"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
-          My work experience as a software engineer and working on different
-          companies and projects.
+          My education has been a journey of self-discovery and growth. My
+          educational details are as follows.
         </div>
 
-        {experiences.map((experience, index) => (
+        {Educations.map((edu, index) => (
           <div className="w-3/4" key={index}>
             <Timeline>
               <TimelineItem
                 className="relative rounded-xl   py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5"
                 style={{
-                  border: "0.1px solid #C2DDF3",
                   color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
                   background: `${DarkMode ? "#171721" : "#FFFFFF"}`,
                 }}
@@ -49,8 +47,8 @@ export default function Experience() {
                 <TimelineHeader>
                   <TimelineIcon className="p-3" variant="ghost">
                     <img
-                      src={experience.image}
-                      alt={experience.company}
+                      src={edu.image}
+                      alt={edu.college}
                       className="w-5 h-5"
                     />
                   </TimelineIcon>
@@ -60,38 +58,24 @@ export default function Experience() {
                       // color="blue-gray"
                       className="text-[20px] md:text-[16px]"
                     >
-                      {experience.role}
+                      {edu.course}
                     </Typography>
                     <Typography
                       variant="h6"
                       // color="blue-gray"
                       className="text-[18px] md:text-[14px]"
                     >
-                      {experience.company}
+                      {edu.college}
                     </Typography>
                     <Typography
                       variant="small"
                       // color="gray"
                       className="font-normal text-[16px] md:text-[12px]"
                     >
-                      {experience.date}
+                      {edu.date}
                     </Typography>
                   </div>
                 </TimelineHeader>
-                <TimelineBody>
-                  <Typography
-                    color="gary"
-                    className="font-normal text-[15px] md:text-[12px]"
-                  >
-                    <ul>
-                      {experience.points.map((point, index) => (
-                        <li key={index} style={{ listStyle: "square" }}>
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                  </Typography>
-                </TimelineBody>
               </TimelineItem>
             </Timeline>
           </div>
@@ -100,3 +84,5 @@ export default function Experience() {
     </div>
   );
 }
+
+export default Education;

@@ -269,6 +269,28 @@ export const Project = [
     ],
   },
 ];
+export const Educations = [
+  {
+    image: "/src/Images/bridgekash.png",
+    course: "Bachelor of Science in Information Technology (BSC.IT)",
+    college:
+      "Guru Nanak Khalsa College of Arts, Science and Commerce Matunga , Mumbai-19",
+    date: "2020 - 2023",
+  },
+  {
+    image: "/src/Images/bridgekash.png",
+    course: "Higher Secondary Certificate (HSC)",
+    college:
+      "Guru Nanak Khalsa College of Arts, Science and Commerce Matunga , Mumbai-19",
+    date: "2018 - April 2020",
+  },
+  {
+    image: "/src/Images/bridgekash.png",
+    course: "Secondary school certificate (SSC)",
+    college: "Central Railway High School , Lower-Parel Mumbai-12",
+    date: "2006 - 2018",
+  },
+];
 
 export const experiences = [
   {

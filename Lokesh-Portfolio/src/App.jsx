@@ -7,6 +7,7 @@ import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import { DarkModeProvider } from "./global store/DarkModeContext";
+import Education from "./components/Education";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <About />
       <Skills />
       <Portfolio />
+      <Education />
       <Experience />
       <Contact />
       <Footer />
