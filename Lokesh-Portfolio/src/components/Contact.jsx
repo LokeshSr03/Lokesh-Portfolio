@@ -3,13 +3,32 @@ import { useDarkMode } from "../global store/DarkModeContext";
 import { Button } from "@material-tailwind/react";
 import { IoIosSend } from "react-icons/io";
 import { Snackbar } from "@mui/material";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [open, setOpen] = useState(false);
-  const form = useRef();
+
   const { DarkMode } = useDarkMode();
-  const handleSubmit = (e) => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
+
+    emailjs
+      .sendForm("service_ex5bc69", "template_3xphd0h", form.current, {
+        publicKey: "dmzQ10kPEVY-bv8Eq",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          form.current.reset();
+          setOpen(true);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
   return (
     <div
@@ -44,7 +63,7 @@ function Contact() {
             boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
           }}
           ref={form}
-          onSubmit={handleSubmit}
+          onSubmit={sendEmail}
         >
           <div
             id="contitle"
@@ -56,7 +75,7 @@ function Contact() {
           <input
             type="text"
             placeholder="Your Name"
-            name="from_name"
+            name="user_name"
             className="flex-1 bg-transparent outline-none text-[18px] rounded-xl py-3 px-4"
             style={{
               border: `1px solid ${DarkMode ? "#b1b2b3" : "#48494a"}`,
@@ -66,7 +85,7 @@ function Contact() {
           <input
             type="email"
             placeholder="Your Email"
-            name="from_email"
+            name="user_email"
             className="flex-1 bg-transparent outline-none text-[18px] rounded-xl py-3 px-4"
             style={{
               border: `1px solid ${DarkMode ? "#b1b2b3" : "#48494a"}`,
