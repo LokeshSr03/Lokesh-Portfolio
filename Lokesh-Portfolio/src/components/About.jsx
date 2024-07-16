@@ -24,7 +24,7 @@ function About() {
   return (
     <div
       id="about"
-      className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0"
+      className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0  mdm:pb-6 sm:pb-6"
     >
       <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col">
         <div
@@ -36,7 +36,7 @@ function About() {
         </div>
         <div
           id="about-desc"
-          className="text-[18px] text-center  md:text-[16px] md:max-w-[90%] sm:max-w-[90%]"
+          className="text-[18px] text-center  mdm:text-[16px] sm:text-[14px] md:max-w-[90%] sm:max-w-[90%]"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           Dedicated BSc IT student and Full Stack Developer experienced in
@@ -52,36 +52,41 @@ function About() {
           className="flex justify-center items-center flex-wrap gap-10 mt-5"
         >
           {certificates.map((single) => (
-            <div key={single.class}>
+            <div
+              key={single.class}
+              className="sm:flex sm:justify-center sm:items-center"
+            >
               <Card
-                className="mt-6 w-96 "
+                className="mt-6 w-96 sm:w-9/12"
                 style={{
                   background: `${DarkMode ? "#171721" : "#ffffff"}`,
                 }}
               >
                 <CardHeader
                   style={{ background: "rgb(111,135,147)" }}
-                  className="relative h-56 flex justify-center items-center"
+                  className="relative h-56 flex justify-center items-center sm:h-36"
                 >
                   <img
                     src={single.image}
                     alt="card-image"
-                    className="h-[249px] w-[249px]"
+                    className="h-[249px] w-[249px] sm:h-[160px] sm:w-[160px]"
                   />
                 </CardHeader>
                 <CardBody
-                  className="min-h-[215px]"
+                  className="min-h-[215px] sm:min-h-[170px]"
                   style={{ color: `${DarkMode ? "#84858A" : "#888888"}` }}
                 >
-                  <Typography variant="h5" className="mb-2">
+                  <Typography variant="h5" className="mb-2 sm:text-[18px]">
                     {single.class}
                   </Typography>
-                  <Typography>{single.desc}</Typography>
+                  <Typography className="sm:text-[14px]">
+                    {single.desc}
+                  </Typography>
                 </CardBody>
                 <CardFooter className="pt-0">
                   <Button
                     variant="gradient"
-                    className="flex items-center gap-3 bg-custom-gradient"
+                    className="flex items-center gap-3 bg-custom-gradient  sm:text-[12px]"
                     color="blue-gray"
                     onClick={() => handleOpen(single.class)}
                   >

@@ -20,7 +20,7 @@ function HeroSection() {
     <div id="home">
       <div
         id="hero-container"
-        className="flex justify-center relative py-20 px-8 md:py-16 md:px-4 sm:py-8 sm:px-4 z-10 mt-12 md:mt-0 sm:mt-0"
+        className="flex justify-center relative py-20 px-8 mdm:py-6 md:px-4 sm:py-6 sm:px-4 z-10 mt-12 md:mt-0 sm:mt-0"
         // style={{
         //   clipPath: "polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%)",
         //   background:
@@ -407,14 +407,14 @@ function HeroSection() {
           >
             <div
               id="title"
-              className="font-bold text-5xl md:text-center sm:mb-2"
+              className="font-bold text-5xl md:text-center sm:mb-2 sm:text-4xl"
               style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
             >
               Hi, I am <br /> {Bio.name}
             </div>
             <div
               id="textloop"
-              className="font-semibold text-4xl flex gap-3  md:text-center sm:mb-4 md:flex-wrap sm:flex-wrap md:justify-center md:items-center sm:justify-center sm:items-center"
+              className="font-semibold text-4xl flex gap-3  md:text-center sm:mb-2 md:flex-wrap sm:flex-wrap md:justify-center md:items-center sm:justify-center sm:items-center sm:text-2xl"
               style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
             >
               I am a
@@ -468,12 +468,12 @@ function HeroSection() {
           </div>
           <div
             id="right"
-            className="w-full flex order-2 justify-end gap-3 md:order-1 md:justify-center md:items-center mdm:mb-16 sm:mb-7"
+            className="w-full flex order-2 justify-end gap-3 md:order-1 md:justify-center md:items-center mdm:mb-16 sm:mb-10"
           >
             <img
               src={profile}
               alt="lokesh"
-              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] mdm:max-w-[360px] mdm:max-h-[360px] sm:max-w-[250px] sm:max-h-[250px] "
+              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] mdm:max-w-[360px] mdm:max-h-[360px] sm:max-w-[250px] sm:max-h-[250px] mdm:mt-8 sm:mt-4"
               style={{
                 border: "2px solid #C2DDF3",
               }}
