@@ -34,7 +34,10 @@ function HeroSection() {
             transform: "translateX(-50%) translateY(-50%)",
           }}
         >
-          <div id="HeroBgAnimation" className="w-[600px] h-[500px]">
+          <div
+            id="HeroBgAnimation"
+            className="w-[600px] h-[500px] mdm:w-[500px] mdm:h-[400px] sm:w-[350px] sm:h-[250px]"
+          >
             <svg
               className="BgAnimation__svg"
               viewBox="0 0 602 602"
@@ -400,7 +403,7 @@ function HeroSection() {
         >
           <div
             id="left"
-            className="w-full order-1 md:order-2 md:mb-7 md:flex md:flex-col md:items-center sm:order-2 sm:mb-7 sm:flex sm:flex-col sm:items-center "
+            className="w-full order-1 md:order-2  md:flex md:flex-col md:items-center sm:order-2  sm:flex sm:flex-col sm:items-center "
           >
             <div
               id="title"
@@ -465,12 +468,12 @@ function HeroSection() {
           </div>
           <div
             id="right"
-            className="w-full flex order-2 justify-end gap-3 md:order-1 md:justify-center md:items-center md:mb-20 sm:mb-7"
+            className="w-full flex order-2 justify-end gap-3 md:order-1 md:justify-center md:items-center mdm:mb-16 sm:mb-7"
           >
             <img
               src={profile}
               alt="lokesh"
-              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] md:max-w-[360px] md:max-h-[360px] sm:max-w-[250px] sm:max-h-[250px] "
+              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] mdm:max-w-[360px] mdm:max-h-[360px] sm:max-w-[250px] sm:max-h-[250px] "
               style={{
                 border: "2px solid #C2DDF3",
               }}

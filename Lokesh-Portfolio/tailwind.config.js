@@ -25,6 +25,9 @@ module.exports = withMT({
         md: { max: "960px" },
         // => @media (max-width: 767px) { ... }
 
+        mdm: { min: "640px", max: "960px" },
+        // => @media (max-width: 767px) { ... }
+
         sm: { max: "639px" },
         // => @media (max-width: 639px) { ... }
       },
