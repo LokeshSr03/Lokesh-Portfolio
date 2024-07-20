@@ -21,21 +21,21 @@ function Skills() {
           Skills
         </div>
         <div
-          id="desc"
-          className="text-[18px] text-center max-w-[600px] md:text-[16px]"
+          id="skillsdesc"
+          className="text-[18px] text-center  mdm:text-[16px] sm:text-[14px] md:max-w-[90%] sm:max-w-[90%]"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           Here are some of my skills on which I have been working
         </div>
         <div
           id="skillContainer"
-          className="w-full flex flex-wrap mt-[30px] gap-[30px] justify-center"
+          className="flex justify-center items-center flex-wrap gap-10 mt-5"
         >
           {skills.map((skill) => (
             <div
               id="skill"
               key={skill.title}
-              className="w-full max-w-[500px] shadow-skill-shadow rounded-2xl py-[16px] px-9 md:max-w-[400px] md:py-[10px] md:px-9 sm:max-w-[330px] sm:py-[10px] sm:px-9 "
+              className="w-full max-w-[500px] shadow-skill-shadow rounded-2xl py-[16px] px-9 mdm:max-w-[400px] mdm:py-[10px] mdm:px-9 sm:w-9/12 sm:py-[8px] sm:px-3 "
               style={{
                 border: "0.1px solid #C2DDF3",
                 background: `${DarkMode ? "#171721" : "#FFFFFF"}`,
@@ -43,7 +43,7 @@ function Skills() {
             >
               <h2
                 id="skilltitle"
-                className="text-[28px] font-semibold mb-5 text-center"
+                className="text-[28px] font-semibold mb-5 text-center sm:text-[18px]"
                 style={{
                   color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
                 }}
@@ -52,13 +52,14 @@ function Skills() {
               </h2>
               <div
                 id="skilllist"
-                className="flex justify-center flex-wrap gap-3 mb-5"
+                className="flex justify-center flex-wrap gap-3 mb-5  "
               >
                 {skill.skills.map((item) => (
                   <div
                     id="skillitem"
                     key={item.name}
-                    className="text-[16px] font-semibold rounded-xl py-3 px-4 flex items-center justify-center flex-col gap-2 md:text-[14px] md:py-[6px] md:px-3 sm:text-[14px] sm:py-[6px] sm:px-3 cursor-pointer"
+                    className="text-[16px] font-semibold rounded-xl py-3 px-4 sm:py-1 sm:px-2 flex items-center justify-center flex-col gap-2 sm:gap-1
+                     mdm:text-[14px] mdm:py-[6px] mdm:px-3 sm:text-[14px]   cursor-pointer"
                     style={{
                       color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
                       border: `1px solid ${
@@ -66,8 +67,12 @@ function Skills() {
                       }`,
                     }}
                   >
-                    <img src={item.image} alt={item.name} className="w-6 h-6" />
-                    <div className="text-xs">{item.name}</div>
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-6 h-6 sm:w-3 sm:h-3"
+                    />
+                    <div className="text-xs sm:text-[10px]">{item.name}</div>
                   </div>
                 ))}
               </div>

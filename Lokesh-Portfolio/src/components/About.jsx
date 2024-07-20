@@ -99,7 +99,7 @@ function About() {
                 open={openCard === single.class}
                 handler={() => handleOpen(single.class)}
               >
-                <DialogHeader className="justify-between">
+                <DialogHeader className="justify-between sm:pb-0">
                   <div className="flex items-center gap-3">
                     <div className="-mt-px flex flex-col">
                       <Typography
