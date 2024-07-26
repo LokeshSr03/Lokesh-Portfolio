@@ -203,7 +203,7 @@ function Portfolio() {
     return (
       <div
         id="project"
-        className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0"
+        className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0 mdm:pb-6 sm:pb-6"
       >
         <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col">
           <div
@@ -214,14 +214,17 @@ function Portfolio() {
             Projects
           </div>
           <div
-            id="desc"
-            className="text-[18px] text-center max-w-[600px] md:text-[16px]"
+            id="portdesc"
+            className="text-[18px] text-center  mdm:text-[16px] sm:text-[14px] mdm:max-w-[90%] sm:max-w-[90%]"
             style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
           >
-            I have worked on a wide range of projects.Here are some of my
+            I have worked on a wide range of projects. Here are some of my
             projects.
           </div>
-          <div className="flex justify-center items-center gap-12">
+          <div
+            id="port-box"
+            className="flex justify-center items-center flex-wrap gap-10 mt-5"
+          >
             {Project.map((single) => (
               <div key={single.Pname}>
                 <Card

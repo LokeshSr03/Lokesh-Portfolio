@@ -7,7 +7,7 @@ function Skills() {
   return (
     <div
       id="skills"
-      className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0"
+      className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0 mdm:pb-6 sm:pb-6"
     >
       <div
         id="wrapper"
@@ -35,7 +35,7 @@ function Skills() {
             <div
               id="skill"
               key={skill.title}
-              className="w-full max-w-[500px] shadow-skill-shadow rounded-2xl py-[16px] px-9 mdm:max-w-[400px] mdm:py-[10px] mdm:px-9 sm:w-9/12 sm:py-[8px] sm:px-3 "
+              className="w-full max-w-[500px] min-h-[360px] md:min-h-0 shadow-skill-shadow rounded-2xl py-[16px] px-9 mdm:max-w-[400px] mdm:py-[10px] mdm:px-9 sm:w-9/12 sm:py-[8px] sm:px-3 "
               style={{
                 border: "0.1px solid #C2DDF3",
                 background: `${DarkMode ? "#171721" : "#FFFFFF"}`,
