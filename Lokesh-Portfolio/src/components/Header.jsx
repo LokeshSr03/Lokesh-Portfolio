@@ -45,7 +45,7 @@ function Header() {
     <>
       <div
         id="home"
-        className="flex justify-between items-center px-8  bg-header-black shadow-high-shadow"
+        className="flex justify-between items-center px-8  bg-header-black shadow-high-shadow fixed top-0 left-0 right-0 z-50"
       >
         <div className="py-4">
           <a href="#home">

@@ -81,7 +81,7 @@ export default function Experience() {
                 <TimelineBody>
                   <Typography
                     color="gary"
-                    className="font-normal text-[15px] mdm:text-[12px] sm:text-[8px]"
+                    className="font-normal text-[15px] mdm:text-[12px] sm:text-[10px]"
                   >
                     <ul>
                       {experience.points.map((point, index) => (
