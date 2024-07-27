@@ -15,7 +15,7 @@ export default function Experience() {
   return (
     <div
       id="experience"
-      className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0"
+      className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0  mdm:pb-6 sm:pb-6"
     >
       <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col">
         <div
@@ -27,7 +27,7 @@ export default function Experience() {
         </div>
         <div
           id="desc"
-          className="text-[18px] text-center max-w-[600px] md:text-[16px] md:max-w-[420px]"
+          className="text-[18px] text-center  mdm:text-[16px] sm:text-[14px] md:max-w-[90%] sm:max-w-[90%]"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           My work experience as a software engineer and working on different
@@ -38,7 +38,7 @@ export default function Experience() {
           <div className="w-3/4" key={index}>
             <Timeline>
               <TimelineItem
-                className="relative rounded-xl   py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5"
+                className="relative rounded-xl   py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5 sm:pr-4"
                 style={{
                   border: "0.1px solid #C2DDF3",
                   color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
@@ -58,21 +58,21 @@ export default function Experience() {
                     <Typography
                       variant="h5"
                       // color="blue-gray"
-                      className="text-[20px] md:text-[16px]"
+                      className="text-[20px] mdm:text-[16px] sm:text-[12px]"
                     >
                       {experience.role}
                     </Typography>
                     <Typography
                       variant="h6"
                       // color="blue-gray"
-                      className="text-[18px] md:text-[14px]"
+                      className="text-[18px] mdm:text-[14px] sm:text-[10px]"
                     >
                       {experience.company}
                     </Typography>
                     <Typography
                       variant="small"
                       // color="gray"
-                      className="font-normal text-[16px] md:text-[12px]"
+                      className="font-normal text-[16px] mdm:text-[12px] sm:text-[8px] "
                     >
                       {experience.date}
                     </Typography>
@@ -81,7 +81,7 @@ export default function Experience() {
                 <TimelineBody>
                   <Typography
                     color="gary"
-                    className="font-normal text-[15px] md:text-[12px]"
+                    className="font-normal text-[15px] mdm:text-[12px] sm:text-[8px]"
                   >
                     <ul>
                       {experience.points.map((point, index) => (
