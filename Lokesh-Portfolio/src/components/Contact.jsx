@@ -42,22 +42,22 @@ function Contact() {
     >
       <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col mb-16">
         <div
-          id="porttitle"
+          id="contitle"
           className="text-[42px] text-center font-semibold mt-5"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           Contact
         </div>
         <div
-          id="desc"
-          className="text-[18px] text-center max-w-[600px] md:text-[16px] md:max-w-[420px]"
+          id="condesc"
+          className="text-[18px] text-center  mdm:text-[16px] sm:text-[14px] md:max-w-[90%] sm:max-w-[90%]"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           Feel free to reach out to me for any questions or opportunities!
         </div>
 
         <form
-          className="w-[80%] max-w-[600px] flex flex-col p-8 rounded-2xl mt-7 gap-3"
+          className="w-3/4 max-w-[600px] flex flex-col p-8 rounded-2xl  gap-3 sm:mt-0"
           style={{
             background: `${DarkMode ? "#171721" : "#FFFFFF"}`,
             boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
@@ -67,8 +67,8 @@ function Contact() {
         >
           <div
             id="contitle"
-            className="text-[24px] mb-[6px] font-semibold "
-            style={{ color: `${DarkMode ? "#F2F3F4" : "#111111"}` }}
+            className="text-[24px] mb-[6px] font-semibold sm:text-[18px] "
+            style={{ color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}` }}
           >
             Email Me 🚀
           </div>
@@ -76,19 +76,19 @@ function Contact() {
             type="text"
             placeholder="Your Name"
             name="user_name"
-            className="flex-1 bg-transparent outline-none text-[18px] rounded-xl py-3 px-4"
+            className="flex-1 bg-transparent outline-none text-[18px] rounded-xl py-3 px-4 sm:text-[12px] "
             style={{
-              border: `1px solid ${DarkMode ? "#b1b2b3" : "#48494a"}`,
-              color: `${DarkMode ? "#F2F3F4" : "#111111"}`,
+              border: `1px solid ${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
+              color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
             }}
           />
           <input
             type="email"
             placeholder="Your Email"
             name="user_email"
-            className="flex-1 bg-transparent outline-none text-[18px] rounded-xl py-3 px-4"
+            className="flex-1 bg-transparent outline-none text-[18px] rounded-xl py-3 px-4 sm:text-[12px]"
             style={{
-              border: `1px solid ${DarkMode ? "#b1b2b3" : "#48494a"}`,
+              border: `1px solid ${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
               color: `${DarkMode ? "#F2F3F4" : "#111111"}`,
             }}
           />
@@ -96,9 +96,9 @@ function Contact() {
             name="message"
             rows="4"
             placeholder="Message"
-            className="flex-1 bg-transparent outline-none text-[18px] rounded-xl py-3 px-4"
+            className="flex-1 bg-transparent outline-none text-[18px] rounded-xl py-3 px-4 sm:text-[12px]"
             style={{
-              border: `1px solid ${DarkMode ? "#b1b2b3" : "#48494a"}`,
+              border: `1px solid ${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
               color: `${DarkMode ? "#F2F3F4" : "#111111"}`,
             }}
           />
@@ -110,7 +110,7 @@ function Contact() {
             type="submit"
             value="Send"
           >
-            <IoIosSend className="text-xl" />
+            <IoIosSend className="text-xl sm:text-[12px]" />
             Send
           </Button>
         </form>
