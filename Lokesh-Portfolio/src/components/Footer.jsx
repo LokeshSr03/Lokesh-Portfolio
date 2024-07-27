@@ -13,7 +13,7 @@ function Footer() {
   return (
     <div id="footcontainer" className="w-full py-4 px-0 flex justify-center ">
       <footer
-        className="w-full max-w-[1200px] flex flex-col gap-[14px] items-center p-4 sm:gap-2"
+        className="w-full max-w-[1200px] flex flex-col gap-[14px] items-center p-4 sm:gap-[6px]"
         style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
       >
         <h1
