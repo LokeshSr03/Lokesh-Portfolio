@@ -13,20 +13,20 @@ function Education() {
   const { DarkMode } = useDarkMode();
   return (
     <div
-      id="experience"
-      className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0"
+      id="education"
+      className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0  mdm:pb-6 sm:pb-6"
     >
       <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col">
         <div
-          id="porttitle"
+          id="edutitle"
           className="text-[42px] text-center font-semibold mt-5"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           Education
         </div>
         <div
-          id="desc"
-          className="text-[18px] text-center max-w-[600px] md:text-[16px] md:max-w-[420px]"
+          id="edudesc"
+          className="text-[18px] text-center  mdm:text-[16px] sm:text-[14px] md:max-w-[90%] sm:max-w-[90%]"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           My education has been a journey of self-discovery and growth. My
@@ -37,7 +37,7 @@ function Education() {
           <div className="w-3/4" key={index}>
             <Timeline>
               <TimelineItem
-                className="relative rounded-xl   py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5"
+                className="relative rounded-xl   py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5 sm:pr-4"
                 style={{
                   color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
                   background: `${DarkMode ? "#171721" : "#FFFFFF"}`,
@@ -63,21 +63,21 @@ function Education() {
                     <Typography
                       variant="h5"
                       // color="blue-gray"
-                      className="text-[20px] md:text-[14px]"
+                      className="text-[20px] mdm:text-[14px] sm:text-[12px]"
                     >
                       {edu.course}
                     </Typography>
                     <Typography
                       variant="h6"
                       // color="blue-gray"
-                      className="text-[18px] md:text-[12px]"
+                      className="text-[18px] mdm:text-[12px] sm:text-[10px]"
                     >
                       {edu.college}
                     </Typography>
                     <Typography
                       variant="small"
                       // color="gray"
-                      className="font-normal text-[16px] md:text-[10px]"
+                      className="font-normal text-[16px] mdm:text-[10px] sm:text-[8px]"
                     >
                       {edu.date}
                     </Typography>
