@@ -293,7 +293,7 @@ export const Project = [
   },
   {
     Pimage: "/src/Images/class/rstclass.png",
-    Pname: "E-Waste-Management",
+    Pname: "E-Waste Management",
     Picon: [
       {
         name: "HTML",

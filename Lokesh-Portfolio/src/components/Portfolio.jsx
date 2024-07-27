@@ -30,8 +30,8 @@ function Portfolio() {
   if (screenwidth < breakpoint) {
     return (
       <div
-        id="about"
-        className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0 sm:mt-0"
+        id="project"
+        className="flex flex-col justify-center items-center relative z-[1] mt-12 md:mt-0  mdm:pb-6 sm:pb-6"
       >
         <div className="relative flex justify-between items-center flex-col w-full max-w-[1100px] gap-3 md:flex-col">
           <div
@@ -43,7 +43,7 @@ function Portfolio() {
           </div>
           <div
             id="desc"
-            className="text-[18px] text-center max-w-[600px] md:text-[16px] md:max-w-[420px]"
+            className="text-[18px] text-center  mdm:text-[16px] sm:text-[14px] md:max-w-[90%] sm:max-w-[90%]"
             style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
           >
             I have worked on a wide range of projects.Here are some of my
@@ -52,16 +52,16 @@ function Portfolio() {
           <Carousel className="rounded-xl" navigation={false} autoplay loop>
             {Project.map((single) => (
               <div
-                className="flex justify-center items-center gap-7"
+                className="flex justify-center items-center gap-7 "
                 key={single.Pname}
               >
                 <Card
-                  className="w-80"
+                  className="w-80  sm:w-4/6 sm:py-[8px] sm:px-3"
                   style={{
                     background: `${DarkMode ? "#171721" : "#FFFFFF"}`,
                   }}
                 >
-                  <CardHeader floated={false} className="h-60 w-70">
+                  <CardHeader floated={false} className="h-60 w-70 sm:h-40 ">
                     <img
                       src="https://docs.material-tailwind.com/img/team-3.jpg"
                       alt="profile-picture"
@@ -71,7 +71,7 @@ function Portfolio() {
                     <Typography
                       variant="h4"
                       color="blue-gray"
-                      className="mb-2"
+                      className="mb-2 sm:text-[16px]"
                       style={{
                         color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
                       }}
@@ -79,22 +79,22 @@ function Portfolio() {
                       {single.Pname}
                     </Typography>
                   </CardBody>
-                  <CardFooter className="flex justify-center gap-7 pt-2 flex-wrap">
+                  <CardFooter className="flex justify-center gap-7 pt-2 flex-wrap sm:gap-6">
                     {single.Picon.map((ic, index) => (
                       <Tooltip key={index} content={ic.name}>
                         <img
                           src={ic.ico}
                           alt={ic.name}
-                          className="w-4 h-4 cursor-pointer"
+                          className="w-4 h-4 cursor-pointer sm:w-2 sm:h-2"
                         />
                       </Tooltip>
                     ))}
                   </CardFooter>
-                  <CardFooter className="pt-0 flex justify-center gap-3 items-center flex-wrap ">
+                  <CardFooter className="pt-0 flex justify-center gap-3 items-center flex-wrap sm:px-4">
                     <Button
                       size="sm"
                       variant="text"
-                      className="flex items-center gap-2 hover:bg-[#a6b8c1]"
+                      className="flex items-center gap-2 hover:bg-[#a6b8c1] sm:text-[10px] sm:px-2"
                       style={{
                         color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
                       }}
@@ -102,7 +102,7 @@ function Portfolio() {
                     >
                       Gallery
                       <PhotoIcon
-                        className="h-5 w-5 transition-transform group-hover:hidden transition-all duration-2000"
+                        className="h-5 w-5 transition-transform group-hover:hidden transition-all duration-2000 sm:h-4 sm:w-4"
                         color={`${DarkMode ? "#fff" : "#31333b"}`}
                       />
                     </Button>
@@ -111,7 +111,7 @@ function Portfolio() {
                       <Button
                         size="sm"
                         variant="text"
-                        className="flex items-center gap-2 hover:bg-[#a6b8c1]"
+                        className="flex items-center gap-2 hover:bg-[#a6b8c1] sm:text-[10px]"
                         style={{
                           color: `${
                             DarkMode ? "#F2F3F4" + 80 : "#111111" + 80
@@ -120,7 +120,7 @@ function Portfolio() {
                       >
                         Github
                         <FaGithubSquare
-                          className="h-5 w-5"
+                          className="h-5 w-5 sm:h-4 sm:w-4"
                           color={`${DarkMode ? "#fff" : "#31333b"}`}
                         />
                       </Button>
