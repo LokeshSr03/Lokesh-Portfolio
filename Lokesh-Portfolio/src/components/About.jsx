@@ -40,10 +40,10 @@ function About() {
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
         >
           Dedicated BSc IT student and Full Stack Developer experienced in
-          JavaScript, React, and Node. js. Specializes in developing intuitive
+          JavaScript, React, and Node.js. Specializes in developing intuitive
           website solutions with a creative flair. Likes to solve problems with
           the most mind-boggling coding techniques. Dedicated to participate in
-          latest projects and to provide technology available.I have completed
+          latest projects and to provide technology available. I have completed
           two courses, which are listed below.
         </div>
 
@@ -137,7 +137,7 @@ function About() {
                 </DialogHeader>
                 <DialogBody className="flex justify-center items-center">
                   <img
-                    alt="nature"
+                    alt="certificate"
                     className="h-[35rem] md:h-auto sm:h-auto rounded-lg object-cover object-center"
                     src={single.certificate}
                   />
