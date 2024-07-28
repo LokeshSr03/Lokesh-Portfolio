@@ -36,7 +36,7 @@ function HeroSection() {
         >
           <div
             id="HeroBgAnimation"
-            className="w-[600px] h-[500px] mdm:w-[500px] mdm:h-[400px] sm:w-[350px] sm:h-[250px]"
+            className="w-[600px] h-[500px] mdm:w-[500px] mdm:h-[400px] sm:w-[370px] sm:h-[270px]"
           >
             <svg
               className="BgAnimation__svg"
