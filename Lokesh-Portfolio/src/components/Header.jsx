@@ -77,11 +77,11 @@ function Header() {
   return (
     <>
       <div
-        id="hero-container"
+        id="header"
         className="flex justify-between items-center px-8 bg-header-black shadow-high-shadow fixed top-0 left-0 right-0 z-50"
       >
         <div className="py-4">
-          <a href="#home">
+          <a href="#logo">
             <img
               src="/src/assets/Logo.png"
               className="w-12 h-12"
