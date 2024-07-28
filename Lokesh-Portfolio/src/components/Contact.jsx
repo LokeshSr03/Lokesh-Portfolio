@@ -6,12 +6,24 @@ import { Snackbar } from "@mui/material";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
-  const [open, setOpen] = useState(false);
-
   const { DarkMode } = useDarkMode();
 
   const form = useRef();
 
+  const [state, setState] = React.useState({
+    open: false,
+    vertical: "top",
+    horizontal: "center",
+  });
+  const { vertical, horizontal, open } = state;
+
+  const handleClick = (newState) => () => {
+    setState({ ...newState, open: true });
+  };
+
+  const handleClose = () => {
+    setState({ ...state, open: false });
+  };
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -23,7 +35,6 @@ function Contact() {
         () => {
           console.log("SUCCESS!");
           form.current.reset();
-          setOpen(true);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -104,6 +115,7 @@ function Contact() {
           />
 
           <Button
+            onClick={handleClick({ vertical: "top", horizontal: "right" })}
             variant="gradient"
             className="flex items-center gap-1 mt-4 bg-custom-gradient justify-center "
             color="blue-gray"
@@ -115,11 +127,13 @@ function Contact() {
           </Button>
         </form>
         <Snackbar
+          className="z-10 mt-24  sm"
+          anchorOrigin={{ vertical, horizontal }}
+          // autoHideDuration={6000}
           open={open}
-          autoHideDuration={6000}
-          onClose={() => setOpen(false)}
+          onClose={handleClose}
           message="Email sent successfully!"
-          severity="success"
+          key={vertical + horizontal}
         />
       </div>
     </div>
