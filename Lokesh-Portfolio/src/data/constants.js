@@ -15,48 +15,48 @@ export const skills = [
     skills: [
       {
         name: "React Js",
-        image: "/src/Images/skills/react.png",
+        image: "/Images/skills/react.png",
       },
       {
         name: "Redux",
-        image: "/src/Images/skills/redux.png",
+        image: "/Images/skills/redux.png",
       },
       {
         name: "HTML",
-        image: "/src/Images/skills/html.png",
+        image: "/Images/skills/html.png",
       },
       {
         name: "CSS",
-        image: "/src/Images/skills/css.png",
+        image: "/Images/skills/css.png",
       },
       {
         name: "JavaScript",
-        image: "/src/Images/skills/js.png",
+        image: "/Images/skills/js.png",
       },
 
       {
         name: "Material UI",
-        image: "/src/Images/skills/material.png",
+        image: "/Images/skills/material.png",
       },
       {
         name: "Tailwind Css",
-        image: "/src/Images/skills/tailwind.png",
+        image: "/Images/skills/tailwind.png",
       },
       {
         name: "Chakra UI",
-        image: "/src/Images/skills/chakra.png",
+        image: "/Images/skills/chakra.png",
       },
       {
         name: "Saas",
-        image: "/src/Images/skills/saas.png",
+        image: "/Images/skills/saas.png",
       },
       {
         name: "Wordpress",
-        image: "/src/Images/skills/wordpress.png",
+        image: "/Images/skills/wordpress.png",
       },
       {
         name: "Axios",
-        image: "/src/Images/skills/axios.png",
+        image: "/Images/skills/axios.png",
       },
     ],
   },
@@ -65,29 +65,29 @@ export const skills = [
     skills: [
       {
         name: "Node Js",
-        image: "/src/Images/skills/node.png",
+        image: "/Images/skills/node.png",
       },
       {
         name: "Express Js",
-        image: "/src/Images/skills/express.png",
+        image: "/Images/skills/express.png",
       },
 
       {
         name: "MySQL",
-        image: "/src/Images/skills/mysql.png",
+        image: "/Images/skills/mysql.png",
       },
 
       {
         name: "MongoDB",
-        image: "/src/Images/skills/mongodb.png",
+        image: "/Images/skills/mongodb.png",
       },
       {
         name: "Mongoose",
-        image: "/src/Images/skills/mongoose.png",
+        image: "/Images/skills/mongoose.png",
       },
       {
         name: "JWT",
-        image: "/src/Images/skills/jwt.png",
+        image: "/Images/skills/jwt.png",
       },
     ],
   },
@@ -97,40 +97,40 @@ export const skills = [
     skills: [
       {
         name: "Git",
-        image: "/src/Images/skills/git.png",
+        image: "/Images/skills/git.png",
       },
       {
         name: "GitHub",
-        image: "/src/Images/skills/github.png",
+        image: "/Images/skills/github.png",
       },
 
       {
         name: "Netlify",
-        image: "/src/Images/skills/netlify.png",
+        image: "/Images/skills/netlify.png",
       },
       {
         name: "VS Code",
-        image: "/src/Images/skills/vs.png",
+        image: "/Images/skills/vs.png",
       },
       {
         name: "Postman",
-        image: "/src/Images/skills/postman.png",
+        image: "/Images/skills/postman.png",
       },
       {
         name: "Babel",
-        image: "/src/Images/skills/babel.png",
+        image: "/Images/skills/babel.png",
       },
       {
         name: "Webpack",
-        image: "/src/Images/skills/webpack.png",
+        image: "/Images/skills/webpack.png",
       },
       {
         name: "Vite",
-        image: "/src/Images/skills/vite.png",
+        image: "/Images/skills/vite.png",
       },
       {
         name: "Create-react-app",
-        image: "/src/Images/skills/create.png",
+        image: "/Images/skills/create.png",
       },
     ],
   },
@@ -153,57 +153,57 @@ export const certificates = [
 
 export const Project = [
   {
-    Pimage: "/src/Images/class/rstclass.png",
+    Pimage: "/Images/class/rstclass.png",
     Pname: "RST-Store",
     Picon: [
       {
         name: "HTML5",
-        ico: "/src/Images/skills/html.png",
+        ico: "/Images/skills/html.png",
       },
       {
         name: "CSS3",
-        ico: "/src/Images/skills/css.png",
+        ico: "/Images/skills/css.png",
       },
       {
         name: "React.js",
-        ico: "/src/Images/skills/react.png",
+        ico: "/Images/skills/react.png",
       },
 
       {
         name: "Node.js",
-        ico: "/src/Images/skills/node.png",
+        ico: "/Images/skills/node.png",
       },
       {
         name: "JavaScript",
-        ico: "/src/Images/skills/js.png",
+        ico: "/Images/skills/js.png",
       },
       {
         name: "Create-react-app",
-        ico: "/src/Images/skills/create.png",
+        ico: "/Images/skills/create.png",
       },
       {
         name: "Chakra-UI",
-        ico: "/src/Images/skills/chakra.png",
+        ico: "/Images/skills/chakra.png",
       },
       {
         name: "Postman",
-        ico: "/src/Images/skills/postman.png",
+        ico: "/Images/skills/postman.png",
       },
       {
         name: "JWT",
-        ico: "/src/Images/skills/jwt.png",
+        ico: "/Images/skills/jwt.png",
       },
       {
         name: "Express JS",
-        ico: "/src/Images/skills/express.png",
+        ico: "/Images/skills/express.png",
       },
       {
         name: "MongoDB",
-        ico: "/src/Images/skills/mongodb.png",
+        ico: "/Images/skills/mongodb.png",
       },
       {
         name: "Redux",
-        ico: "/src/Images/skills/redux.png",
+        ico: "/Images/skills/redux.png",
       },
     ],
     Pgithub: "#",
@@ -231,40 +231,40 @@ export const Project = [
     ],
   },
   {
-    Pimage: "/src/Images/class/rstclass.png",
+    Pimage: "/Images/class/rstclass.png",
     Pname: "Portfolio",
     Picon: [
       {
         name: "HTML5",
-        ico: "/src/Images/skills/html.png",
+        ico: "/Images/skills/html.png",
       },
       {
         name: "CSS3",
-        ico: "/src/Images/skills/css.png",
+        ico: "/Images/skills/css.png",
       },
       {
         name: "React.js",
-        ico: "/src/Images/skills/react.png",
+        ico: "/Images/skills/react.png",
       },
       {
         name: "JavaScript",
-        ico: "/src/Images/skills/js.png",
+        ico: "/Images/skills/js.png",
       },
       {
         name: "Vite",
-        ico: "/src/Images/skills/vite.png",
+        ico: "/Images/skills/vite.png",
       },
       {
         name: "Tailwind Css",
-        ico: "/src/Images/skills/tailwind.png",
+        ico: "/Images/skills/tailwind.png",
       },
       {
         name: "Netlify",
-        ico: "/src/Images/skills/netlify.png",
+        ico: "/Images/skills/netlify.png",
       },
       {
         name: "Babel",
-        ico: "/src/Images/skills/babel.png",
+        ico: "/Images/skills/babel.png",
       },
     ],
     Pgithub: "#",
@@ -292,36 +292,36 @@ export const Project = [
     ],
   },
   {
-    Pimage: "/src/Images/class/rstclass.png",
+    Pimage: "/Images/class/rstclass.png",
     Pname: "E-Waste Management",
     Picon: [
       {
         name: "HTML",
-        ico: "/src/Images/skills/html.png",
+        ico: "/Images/skills/html.png",
       },
       {
         name: "CSS",
-        ico: "/src/Images/skills/css.png",
+        ico: "/Images/skills/css.png",
       },
       {
         name: "JavaScript",
-        ico: "/src/Images/skills/js.png",
+        ico: "/Images/skills/js.png",
       },
       {
         name: "Asp.net",
-        ico: "/src/Images/skills/asp.png",
+        ico: "/Images/skills/asp.png",
       },
       {
         name: "C#",
-        ico: "/src/Images/skills/csharp.png",
+        ico: "/Images/skills/csharp.png",
       },
       {
         name: "MySQL",
-        ico: "/src/Images/skills/mysql.png",
+        ico: "/Images/skills/mysql.png",
       },
       {
         name: "GitHub",
-        ico: "/src/Images/skills/github.png",
+        ico: "/Images/skills/github.png",
       },
     ],
     Pgithub: "#",
@@ -351,21 +351,21 @@ export const Project = [
 ];
 export const Educations = [
   {
-    image: "/src/Images/education/graduation.png",
+    image: "/Images/education/graduation.png",
     course: "Bachelor of Science in Information Technology (BSC.IT)",
     college:
       "Guru Nanak Khalsa College of Arts, Science and Commerce Matunga , Mumbai-19",
     date: "2020 - 2023",
   },
   {
-    image: "/src/Images/education/university.png",
+    image: "/Images/education/university.png",
     course: "Higher Secondary Certificate (HSC)",
     college:
       "Guru Nanak Khalsa College of Arts, Science and Commerce Matunga , Mumbai-19",
     date: "2018 - April 2020",
   },
   {
-    image: "/src/Images/education/school.png",
+    image: "/Images/education/school.png",
     course: "Secondary school certificate (SSC)",
     college: "Central Railway High School , Lower-Parel Mumbai-12",
     date: "2006 - 2018",
@@ -374,7 +374,7 @@ export const Educations = [
 
 export const experiences = [
   {
-    image: "/src/Images/bridgekash.png",
+    image: "/Images/bridgekash.png",
     role: "Front-end Developer (Internship)",
     company: "Bridgekash International Pvt . Ltd",
     date: "Jan 2024 - April 2024",

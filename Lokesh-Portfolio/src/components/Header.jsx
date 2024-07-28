@@ -82,11 +82,7 @@ function Header() {
       >
         <div className="py-4 sm:py-3">
           <a href="#logo">
-            <img
-              src="/src/assets/Logo.png"
-              className="w-12 h-12"
-              alt="lokesh"
-            />
+            <img src="/Images/Logo.png" className="w-12 h-12" alt="lokesh" />
           </a>
         </div>
 
