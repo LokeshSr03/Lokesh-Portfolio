@@ -473,7 +473,7 @@ function HeroSection() {
             <img
               src={profile}
               alt="lokesh"
-              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] mdm:max-w-[360px] mdm:max-h-[360px] sm:max-w-[250px] sm:max-h-[250px] mdm:mt-8 sm:mt-4"
+              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] mdm:max-w-[360px] mdm:max-h-[360px] sm:max-w-[270px] sm:max-h-[270px] mdm:mt-8 sm:mt-4"
               style={{
                 border: "2px solid #C2DDF3",
               }}

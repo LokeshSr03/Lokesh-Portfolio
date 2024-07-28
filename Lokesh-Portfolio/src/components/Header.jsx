@@ -41,6 +41,7 @@ function Header() {
     className:
       "absolute top-2/4 -left-2/4 -translate-y-2/4 -translate-x-3/4 font-normal",
   };
+
   const scrollWithOffset = (element) => {
     const yOffset = -80; // Adjust this value to your header height
     const y =
@@ -50,31 +51,40 @@ function Header() {
   };
 
   useEffect(() => {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
+    const handleAnchorClick = (e) => {
+      e.preventDefault();
 
-        const targetId = this.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
+      const targetId = e.currentTarget.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
 
-        if (targetElement) {
-          scrollWithOffset(targetElement);
-        }
-      });
+      if (targetElement) {
+        scrollWithOffset(targetElement);
+      }
+    };
+
+    const anchors = document.querySelectorAll('a[href^="#"]');
+    anchors.forEach((anchor) => {
+      anchor.addEventListener("click", handleAnchorClick);
     });
+
+    return () => {
+      anchors.forEach((anchor) => {
+        anchor.removeEventListener("click", handleAnchorClick);
+      });
+    };
   }, []);
 
   return (
     <>
       <div
         id="hero-container"
-        className="flex justify-between items-center px-8  bg-header-black shadow-high-shadow fixed top-0 left-0 right-0 z-50"
+        className="flex justify-between items-center px-8 bg-header-black shadow-high-shadow fixed top-0 left-0 right-0 z-50"
       >
         <div className="py-4">
           <a href="#home">
             <img
               src="/src/assets/Logo.png"
-              className="w-12 h-12 "
+              className="w-12 h-12"
               alt="lokesh"
             />
           </a>
@@ -84,7 +94,6 @@ function Header() {
           <li>
             <a
               href="#home"
-              onClick={() => handleScroll("home")}
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
               Home
@@ -154,7 +163,7 @@ function Header() {
             }}
             onClick={handleDark}
           />
-          <div className="relative py-6 hidden md:block z-20 ">
+          <div className="relative py-6 hidden md:block z-20">
             <div className="absolute bottom-0 right-0">
               <SpeedDial placement="bottom">
                 <SpeedDialHandler
@@ -173,11 +182,11 @@ function Header() {
                     />
                   </IconButton>
                 </SpeedDialHandler>
-                <SpeedDialContent className="mt-5 ">
-                  {/* About  */}
+                <SpeedDialContent className="mt-5">
+                  {/* About */}
                   <a href="#about">
                     <SpeedDialAction
-                      className="relative "
+                      className="relative"
                       style={{
                         background: `${DarkMode ? "#fff" : "#31333b"}`,
                         borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
@@ -188,7 +197,6 @@ function Header() {
                         className="h-5 w-5"
                         color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
                       />
-
                       <Typography
                         {...labelProps}
                         style={{ color: `${DarkMode ? "#fff" : "#31333b"}` }}
@@ -198,10 +206,10 @@ function Header() {
                     </SpeedDialAction>
                   </a>
 
-                  {/* Skills  */}
+                  {/* Skills */}
                   <a href="#skills">
                     <SpeedDialAction
-                      className="relative "
+                      className="relative"
                       style={{
                         background: `${DarkMode ? "#fff" : "#31333b"}`,
                         borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
@@ -220,10 +228,10 @@ function Header() {
                     </SpeedDialAction>
                   </a>
 
-                  {/* PortFolio  */}
+                  {/* PortFolio */}
                   <a href="#project">
                     <SpeedDialAction
-                      className="relative "
+                      className="relative"
                       style={{
                         background: `${DarkMode ? "#fff" : "#31333b"}`,
                         borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
@@ -234,7 +242,6 @@ function Header() {
                         className="h-5 w-5"
                         color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
                       />
-
                       <Typography
                         {...labelProps}
                         style={{ color: `${DarkMode ? "#fff" : "#31333b"}` }}
@@ -244,10 +251,10 @@ function Header() {
                     </SpeedDialAction>
                   </a>
 
-                  {/* education  */}
+                  {/* Education */}
                   <a href="#education">
                     <SpeedDialAction
-                      className="relative "
+                      className="relative"
                       style={{
                         background: `${DarkMode ? "#fff" : "#31333b"}`,
                         borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
@@ -266,10 +273,10 @@ function Header() {
                     </SpeedDialAction>
                   </a>
 
-                  {/* Experience  */}
+                  {/* Experience */}
                   <a href="#experience">
                     <SpeedDialAction
-                      className="relative "
+                      className="relative"
                       style={{
                         background: `${DarkMode ? "#fff" : "#31333b"}`,
                         borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
@@ -288,10 +295,10 @@ function Header() {
                     </SpeedDialAction>
                   </a>
 
-                  {/* Contact Us  */}
+                  {/* Contact Us */}
                   <a href="#contact">
                     <SpeedDialAction
-                      className="relative "
+                      className="relative"
                       style={{
                         background: `${DarkMode ? "#fff" : "#31333b"}`,
                         borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
@@ -302,7 +309,6 @@ function Header() {
                         className="h-5 w-5"
                         color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
                       />
-
                       <Typography
                         {...labelProps}
                         style={{ color: `${DarkMode ? "#fff" : "#31333b"}` }}
