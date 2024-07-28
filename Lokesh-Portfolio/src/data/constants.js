@@ -139,15 +139,15 @@ export const skills = [
 export const certificates = [
   {
     class: "Full stack developer from RST FORUM",
-    image: ".../Images/class/rstclass.png",
+    image: "/Images/class/rstclass.png",
     desc: "Full Stack Developer Certified by RST FORUM: I'm skilled in making websites look great and function seamlessly, capable of developing full web applications.",
-    certificate: ".../Images/class/rst.png",
+    certificate: "/Images/class/rst.png",
   },
   {
     class: "React Js from BLOOMZEN",
-    image: ".../Images/class/bloomzenclass.png",
+    image: "/Images/class/bloomzenclass.png",
     desc: "Completed a React.js course covering component-based architecture, state management, and hooks to build dynamic web applications.",
-    certificate: ".../Images/class/bloomzen.png",
+    certificate: "/Images/class/bloomzen.png",
   },
 ];
 
