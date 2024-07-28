@@ -20,7 +20,7 @@ function HeroSection() {
     <div id="home">
       <div
         id="hero-container"
-        className="flex justify-center relative py-20 px-8 mdm:py-6 md:px-4 sm:py-6 sm:px-4 sm:pb-8 z-10 mt-32 mdm:mt-24 sm:mt-24"
+        className="flex justify-center relative py-20 px-8 mdm:py-6 md:px-4 sm:py-6 sm:px-4 sm:pb-10 z-10 mt-32 mdm:mt-24 sm:mt-24"
         // style={{
         //   clipPath: "polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%)",
         //   background:
@@ -36,7 +36,7 @@ function HeroSection() {
         >
           <div
             id="HeroBgAnimation"
-            className="w-[600px] h-[500px] mdm:w-[500px] mdm:h-[400px] sm:w-[370px] sm:h-[270px]"
+            className="w-[600px] h-[500px] mdm:w-[500px] mdm:h-[400px] sm:w-[350px] sm:h-[250px]"
           >
             <svg
               className="BgAnimation__svg"
@@ -473,7 +473,7 @@ function HeroSection() {
             <img
               src={profile}
               alt="lokesh"
-              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] mdm:max-w-[360px] mdm:max-h-[360px] sm:max-w-[270px] sm:max-h-[270px] mdm:mt-8 sm:mt-4"
+              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] mdm:max-w-[360px] mdm:max-h-[360px] sm:max-w-[250px] sm:max-h-[250px] mdm:mt-8 sm:mt-4"
               style={{
                 border: "2px solid #C2DDF3",
               }}
