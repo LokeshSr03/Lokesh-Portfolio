@@ -20,7 +20,7 @@ function HeroSection() {
     <div id="home">
       <div
         id="hero-container"
-        className="flex justify-center relative py-20 px-8 mdm:py-6 md:px-4 sm:py-6 sm:px-4 sm:pb-12 z-10 mt-32 mdm:mt-24 sm:mt-24"
+        className="flex justify-center relative py-20 px-8 mdm:py-6 md:px-4 sm:py-6 sm:px-4 sm:pb-[54px] z-10 mt-32 mdm:mt-24 sm:mt-24"
         // style={{
         //   clipPath: "polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%)",
         //   background:
