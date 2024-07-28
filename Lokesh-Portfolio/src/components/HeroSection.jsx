@@ -407,14 +407,14 @@ function HeroSection() {
           >
             <div
               id="title"
-              className="font-bold text-5xl md:text-center sm:mb-2 sm:text-4xl"
+              className="font-bold text-5xl md:text-center sm:mb-3 sm:text-4xl"
               style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
             >
               Hi, I am <br /> {Bio.name}
             </div>
             <div
               id="textloop"
-              className="font-semibold text-4xl flex gap-3  md:text-center sm:mb-2 md:flex-wrap sm:flex-wrap md:justify-center md:items-center sm:justify-center sm:items-center sm:text-2xl"
+              className="font-semibold text-4xl flex gap-3  md:text-center sm:mb-3 md:flex-wrap sm:flex-wrap md:justify-center md:items-center sm:justify-center sm:items-center sm:text-2xl"
               style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
             >
               I am a
