@@ -39,10 +39,10 @@ function Portfolio() {
             className="text-[42px] text-center font-semibold mt-5"
             style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
           >
-            Project
+            Projects
           </div>
           <div
-            id="desc"
+            id="prodesc"
             className="text-[18px] text-center  mdm:text-[16px] sm:text-[14px] md:max-w-[90%] sm:max-w-[90%]"
             style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
           >

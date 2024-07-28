@@ -19,6 +19,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { GiSkills } from "react-icons/gi";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { GrUserExpert } from "react-icons/gr";
+import { MdCastForEducation } from "react-icons/md";
 
 function Header() {
   const { DarkMode, handleDark } = useDarkMode();
@@ -40,11 +41,33 @@ function Header() {
     className:
       "absolute top-2/4 -left-2/4 -translate-y-2/4 -translate-x-3/4 font-normal",
   };
+  const scrollWithOffset = (element) => {
+    const yOffset = -80; // Adjust this value to your header height
+    const y =
+      element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          scrollWithOffset(targetElement);
+        }
+      });
+    });
+  }, []);
 
   return (
     <>
       <div
-        id="home"
+        id="hero-container"
         className="flex justify-between items-center px-8  bg-header-black shadow-high-shadow fixed top-0 left-0 right-0 z-50"
       >
         <div className="py-4">
@@ -61,6 +84,7 @@ function Header() {
           <li>
             <a
               href="#home"
+              onClick={() => handleScroll("home")}
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
               Home
@@ -88,6 +112,14 @@ function Header() {
               className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
             >
               Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="#education"
+              className="hover-text transition duration-150 ease-out hover:ease-in hover:text-[#bfbdbd]"
+            >
+              Education
             </a>
           </li>
           <li>
@@ -189,7 +221,7 @@ function Header() {
                   </a>
 
                   {/* PortFolio  */}
-                  <a href="#portfolio">
+                  <a href="#project">
                     <SpeedDialAction
                       className="relative "
                       style={{
@@ -207,7 +239,29 @@ function Header() {
                         {...labelProps}
                         style={{ color: `${DarkMode ? "#fff" : "#31333b"}` }}
                       >
-                        Portfolio
+                        Projects
+                      </Typography>
+                    </SpeedDialAction>
+                  </a>
+
+                  {/* education  */}
+                  <a href="#education">
+                    <SpeedDialAction
+                      className="relative "
+                      style={{
+                        background: `${DarkMode ? "#fff" : "#31333b"}`,
+                        borderColor: `${DarkMode ? "#fff" : "#31333b"}`,
+                      }}
+                    >
+                      <MdCastForEducation
+                        className="h-5 w-5"
+                        color={`${DarkMode ? "#31333b" : "#d9d9d9"}`}
+                      />
+                      <Typography
+                        {...labelProps}
+                        style={{ color: `${DarkMode ? "#fff" : "#31333b"}` }}
+                      >
+                        Education
                       </Typography>
                     </SpeedDialAction>
                   </a>
