@@ -3,7 +3,7 @@ export const Bio = {
   role: ["Full Stack Developer", "Front End Developer", "Back End Developer"],
   github: "https://github.com/LokeshSr03",
   resume:
-    "https://drive.google.com/file/d/1vtV99_0bzp1IKtC0ksRmZEyMcnqyU4J8/view",
+    "https://drive.google.com/file/d/1Rj5oDV9zg1Zqvo0EqbIwsUgYofZsyFN9/view",
   linkedin: "https://www.linkedin.com/in/lokeshsuthar03/",
   insta: "https://www.instagram.com/lokesh.sr.03/",
   facebook: "https://www.facebook.com/lokesh.suthar.73744",
@@ -114,11 +114,11 @@ export const skills = [
       },
       {
         name: "Postman",
-        image: "/Images/skills/postman.png",
+        image: "/Images/skills/Postman.png",
       },
       {
         name: "Babel",
-        image: "/Images/skills/babel.png",
+        image: "/Images/skills/Babel.png",
       },
       {
         name: "Webpack",
@@ -126,7 +126,7 @@ export const skills = [
       },
       {
         name: "Vite",
-        image: "/Images/skills/vite.png",
+        image: "/Images/skills/Vite.png",
       },
       {
         name: "Create-react-app",
