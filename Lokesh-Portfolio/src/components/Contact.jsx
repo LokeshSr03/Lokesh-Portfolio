@@ -129,7 +129,7 @@ function Contact() {
         <Snackbar
           className="z-10 mt-24  sm"
           anchorOrigin={{ vertical, horizontal }}
-          // autoHideDuration={6000}
+          autoHideDuration={4000}
           open={open}
           onClose={handleClose}
           message="Email sent successfully!"
