@@ -1,7 +1,7 @@
 import React from "react";
 import { Bio } from "../data/constants";
 import Typewriter from "typewriter-effect";
-import profile from "../Images/lokesh.jpg";
+import profile from "/Images/lokesh.jpg";
 import { useDarkMode } from "../global store/DarkModeContext";
 import { IconButton } from "@material-tailwind/react";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
