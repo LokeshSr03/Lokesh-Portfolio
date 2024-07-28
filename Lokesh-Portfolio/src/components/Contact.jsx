@@ -127,7 +127,7 @@ function Contact() {
           </Button>
         </form>
         <Snackbar
-          className="z-10 mt-24  sm"
+          className="z-10 mt-24  sm:mt-32"
           anchorOrigin={{ vertical, horizontal }}
           autoHideDuration={4000}
           open={open}
