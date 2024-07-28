@@ -36,7 +36,7 @@ function HeroSection() {
         >
           <div
             id="HeroBgAnimation"
-            className="w-[600px] h-[500px] mdm:w-[500px] mdm:h-[400px] sm:w-[350px] sm:h-[250px]"
+            className="w-[600px] h-[500px] mdm:w-[500px] mdm:h-[400px] sm:w-[370px] sm:h-[270px]"
           >
             <svg
               className="BgAnimation__svg"
@@ -468,12 +468,12 @@ function HeroSection() {
           </div>
           <div
             id="right"
-            className="w-full flex order-2 justify-end gap-3 md:order-1 md:justify-center md:items-center mdm:mb-16 sm:mb-10"
+            className="w-full flex order-2 justify-end gap-3 md:order-1 md:justify-center md:items-center mdm:mb-16 sm:mb-12"
           >
             <img
               src={profile}
               alt="lokesh"
-              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] mdm:max-w-[360px] mdm:max-h-[360px] sm:max-w-[250px] sm:max-h-[250px] mdm:mt-8 sm:mt-4"
+              className="relative w-full h-full max-w-[360px] max-h-[360px] rounded-[50%] mdm:max-w-[360px] mdm:max-h-[360px] sm:max-w-[260px] sm:max-h-[260px] mdm:mt-8 sm:mt-4"
               style={{
                 border: "2px solid #C2DDF3",
               }}
