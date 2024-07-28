@@ -187,7 +187,7 @@ export const Project = [
       },
       {
         name: "Postman",
-        ico: "/Images/skills/postman.png",
+        ico: "/Images/skills/Postman.png",
       },
       {
         name: "JWT",
@@ -252,7 +252,7 @@ export const Project = [
       },
       {
         name: "Vite",
-        ico: "/Images/skills/vite.png",
+        ico: "/Images/skills/Vite.png",
       },
       {
         name: "Tailwind Css",
@@ -264,7 +264,7 @@ export const Project = [
       },
       {
         name: "Babel",
-        ico: "/Images/skills/babel.png",
+        ico: "/Images/skills/Babel.png",
       },
     ],
     Pgithub: "#",
