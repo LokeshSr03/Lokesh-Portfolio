@@ -78,9 +78,9 @@ function Header() {
     <>
       <div
         id="header"
-        className="flex justify-between items-center px-8 sm:px-5 bg-header-black shadow-high-shadow fixed top-0 left-0 right-0 z-50"
+        className="flex justify-between items-center px-8 sm:px-6 bg-header-black shadow-high-shadow fixed top-0 left-0 right-0 z-50"
       >
-        <div className="py-4 sm:py-[10px]">
+        <div className="py-4 sm:py-3">
           <a href="#logo">
             <img
               src="/src/assets/Logo.png"
