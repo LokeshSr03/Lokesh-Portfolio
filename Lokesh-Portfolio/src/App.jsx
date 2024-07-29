@@ -1,3 +1,6 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
@@ -10,6 +13,9 @@ import { DarkModeProvider } from "./global store/DarkModeContext";
 import Education from "./components/Education";
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <DarkModeProvider>
       <Header />

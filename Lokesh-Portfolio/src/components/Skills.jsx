@@ -59,13 +59,14 @@ function Skills() {
                     id="skillitem"
                     key={item.name}
                     className="text-[16px] font-semibold rounded-xl py-3 px-4 sm:py-1 sm:px-2 flex items-center justify-center flex-col gap-2 sm:gap-1
-                     mdm:text-[14px] mdm:py-[6px] mdm:px-3 sm:text-[14px]   cursor-pointer hover:animate-fade-in"
+                     mdm:text-[14px] mdm:py-[6px] mdm:px-3 sm:text-[14px]   cursor-pointer animate-fade-in"
                     style={{
                       color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
                       border: `1px solid ${
                         DarkMode ? "#F2F3F4" + 80 : "#111111" + 80
                       }`,
                     }}
+                    data-aos="fade-in"
                   >
                     <img
                       src={item.image}
