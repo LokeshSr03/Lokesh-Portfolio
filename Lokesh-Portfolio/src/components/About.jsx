@@ -38,6 +38,7 @@ function About() {
           id="about-desc"
           className="text-[18px] text-center  mdm:text-[16px] sm:text-[14px] md:max-w-[90%] sm:max-w-[90%]"
           style={{ color: `${DarkMode ? "#d9d9d9" : "#31333b"}` }}
+          data-aos="slide-in-down"
         >
           Dedicated BSc IT student and Full Stack Developer experienced in
           JavaScript, React, and Node. js. Specializes in developing intuitive
@@ -55,6 +56,7 @@ function About() {
             <div
               key={single.class}
               className="sm:flex sm:justify-center sm:items-center"
+              data-aos="fade-in-left"
             >
               <Card
                 className="mt-6 w-96 sm:w-9/12"
@@ -65,6 +67,7 @@ function About() {
                 <CardHeader
                   style={{ background: "rgb(111,135,147)" }}
                   className="relative h-56 flex justify-center items-center sm:h-36"
+                  data-aos="fade-in-left"
                 >
                   <img
                     src={single.image}
@@ -75,6 +78,7 @@ function About() {
                 <CardBody
                   className="min-h-[215px] sm:min-h-[170px]"
                   style={{ color: `${DarkMode ? "#84858A" : "#888888"}` }}
+                  data-aos="fade-in-left"
                 >
                   <Typography variant="h5" className="mb-2 sm:text-[18px]">
                     {single.class}
@@ -83,7 +87,7 @@ function About() {
                     {single.desc}
                   </Typography>
                 </CardBody>
-                <CardFooter className="pt-0">
+                <CardFooter className="pt-0" data-aos="fade-in-left">
                   <Button
                     variant="gradient"
                     className="flex items-center gap-3 bg-custom-gradient  sm:text-[12px]"
