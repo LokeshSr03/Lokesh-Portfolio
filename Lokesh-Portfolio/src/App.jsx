@@ -14,7 +14,7 @@ import Education from "./components/Education";
 
 const App = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1500 });
   }, []);
   return (
     <DarkModeProvider>
