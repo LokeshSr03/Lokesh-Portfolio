@@ -15,7 +15,7 @@ module.exports = withMT({
         },
       },
       animation: {
-        "fade-in": "fade-in 1s ease-in-out",
+        "fade-in": "fade-in 2s ease-in-out",
       },
       colors: {
         "header-black": "#2C2D31",
