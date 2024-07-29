@@ -24,9 +24,19 @@ function Portfolio() {
   const breakpoint = 960;
   const [openCard, setOpenCard] = useState(null);
   const handleOpen = (card) => setOpenCard(openCard === card ? null : card);
-  const [active, setActive] = useState(
-    "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-  );
+
+  // Initialize activeImages state
+  const initialActiveImages = Project.reduce((acc, project) => {
+    acc[project.Pname] = project.Pgallery[0].imgelink;
+    return acc;
+  }, {});
+  const [activeImages, setActiveImages] = useState(initialActiveImages);
+
+  // Update active image for a specific project
+  const setActive = (projectName, imgelink) => {
+    setActiveImages((prev) => ({ ...prev, [projectName]: imgelink }));
+  };
+
   if (screenwidth < breakpoint) {
     return (
       <div
@@ -62,10 +72,7 @@ function Portfolio() {
                   }}
                 >
                   <CardHeader floated={false} className="h-60 w-70 sm:h-40 ">
-                    <img
-                      src="https://docs.material-tailwind.com/img/team-3.jpg"
-                      alt="profile-picture"
-                    />
+                    <img src={single.Pimage} alt="profile-picture" />
                   </CardHeader>
                   <CardBody className="text-center pb-0">
                     <Typography
@@ -98,7 +105,9 @@ function Portfolio() {
                       style={{
                         color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
                       }}
-                      onClick={() => handleOpen(single.Pname)}
+                      onClick={() => {
+                        handleOpen(single.Pname);
+                      }}
                     >
                       Gallery
                       <PhotoIcon
@@ -173,18 +182,18 @@ function Portfolio() {
                     <div className="grid gap-4">
                       <div>
                         <img
-                          className=" h-[33rem] w-[50rem]  md:h-auto sm:h-auto rounded-lg object-cover object-center"
-                          src={active}
+                          className=" h-[28rem]   md:h-auto sm:h-auto rounded-lg  object-center"
+                          src={activeImages[single.Pname]}
                           alt=""
                         />
                       </div>
-                      <div className="grid grid-cols-5 gap-4">
+                      <div className="grid grid-cols-5 gap-1">
                         {single.Pgallery.map(({ imgelink }, index) => (
                           <div key={index}>
                             <img
-                              onClick={() => setActive(imgelink)}
+                              onClick={() => setActive(single.Pname, imgelink)}
                               src={imgelink}
-                              className="h-20 max-w-full cursor-pointer rounded-lg object-cover object-center"
+                              className="h-10 max-w-full cursor-pointer rounded-lg  object-center"
                               alt="gallery-image"
                             />
                           </div>
@@ -234,10 +243,7 @@ function Portfolio() {
                   }}
                 >
                   <CardHeader floated={false} className="h-60 w-70">
-                    <img
-                      src="https://docs.material-tailwind.com/img/team-3.jpg"
-                      alt="profile-picture"
-                    />
+                    <img src={single.Pimage} alt="profile-picture" />
                   </CardHeader>
                   <CardBody className="text-center pb-0">
                     <Typography
@@ -343,10 +349,10 @@ function Portfolio() {
                   </DialogHeader>
                   <DialogBody className="flex justify-center items-center">
                     <div className="grid gap-4">
-                      <div>
+                      <div className="flex justify-center items-center">
                         <img
-                          className=" h-[33rem] w-[50rem]  md:h-auto sm:h-auto rounded-lg object-cover object-center"
-                          src={active}
+                          className=" h-[28rem] md:h-auto sm:h-auto rounded-lg  object-center"
+                          src={activeImages[single.Pname]}
                           alt=""
                         />
                       </div>
@@ -354,9 +360,9 @@ function Portfolio() {
                         {single.Pgallery.map(({ imgelink }, index) => (
                           <div key={index}>
                             <img
-                              onClick={() => setActive(imgelink)}
+                              onClick={() => setActive(single.Pname, imgelink)}
                               src={imgelink}
-                              className="h-20 max-w-full cursor-pointer rounded-lg object-cover object-center"
+                              className="h-20 max-w-full cursor-pointer rounded-lg  object-center"
                               alt="gallery-image"
                             />
                           </div>
