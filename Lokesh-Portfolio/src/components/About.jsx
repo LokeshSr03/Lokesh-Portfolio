@@ -61,7 +61,6 @@ function About() {
                 style={{
                   background: `${DarkMode ? "#171721" : "#ffffff"}`,
                 }}
-                data-aos="fade-in-bouncedown"
               >
                 <CardHeader
                   style={{ background: "rgb(111,135,147)" }}
