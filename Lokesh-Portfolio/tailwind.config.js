@@ -13,9 +13,46 @@ module.exports = withMT({
             opacity: 1,
           },
         },
+        "fade-in-bouncedown": {
+          "0%": {
+            opacity: 0,
+            transform: "translate3d(0%, -100%, 0)",
+          },
+          "33%": {
+            opacity: 0.5,
+            transform: "translate3d(0%, 0%, 0)",
+          },
+          "66%": {
+            opacity: 0.7,
+            transform: "translate3d(0%, -20%, 0)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
+        "fade-in-bounce-left": {
+          "0%": {
+            opacity: 0,
+            transform: "translate3d(-100%, 0%, 0)",
+          },
+          "33%": {
+            opacity: 0.5,
+            transform: "translate3d(0%, 0%, 0)",
+          },
+          "66%": {
+            opacity: 0.7,
+            transform: "translate3d(-20%, 0%, 0)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
       },
       animation: {
         "fade-in": "fade-in 1s ease-in-out",
+        "fade-in-bouncedown": "fade-in-bouncedown 5s ease-in-out",
       },
       colors: {
         "header-black": "#2C2D31",
