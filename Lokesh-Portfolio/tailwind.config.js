@@ -4,6 +4,19 @@ module.exports = withMT({
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        "fade-in": {
+          "0%": {
+            opacity: 0,
+          },
+          "100%": {
+            opacity: 1,
+          },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 1s ease-in-out",
+      },
       colors: {
         "header-black": "#2C2D31",
         "header-text": "#D9D9D9",
