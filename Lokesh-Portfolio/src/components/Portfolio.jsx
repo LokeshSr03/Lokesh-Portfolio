@@ -182,7 +182,7 @@ function Portfolio() {
                     <div className="grid gap-4">
                       <div>
                         <img
-                          className=" h-[28rem]   md:h-auto sm:h-auto rounded-lg  object-center"
+                          className=" h-[33rem]   md:h-auto sm:h-auto rounded-lg  object-center"
                           src={activeImages[single.Pname]}
                           alt=""
                         />
