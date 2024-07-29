@@ -33,21 +33,11 @@ module.exports = withMT({
             transform: "translate3d(0, 0, 0)",
           },
         },
-        "slide-in-down": {
-          "0%": {
-            visibility: "visible",
-            transform: "translate3d(0, -100%, 0)",
-          },
-          "100%": {
-            transform: "translate3d(0, 0, 0)",
-          },
-        },
       },
       animation: {
         "fade-in": "fade-in 1s ease-in-out",
         "fade-in-left": "fade-in-left 1s ease-in-out",
         "fade-in-right": "fade-in-right 1s ease-in-out",
-        "slide-in-down": "slide-in-down 1s ease-in-out",
       },
       colors: {
         "header-black": "#2C2D31",
