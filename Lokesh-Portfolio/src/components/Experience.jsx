@@ -35,7 +35,7 @@ export default function Experience() {
         </div>
 
         {experiences.map((experience, index) => (
-          <div className="w-3/4" key={index}>
+          <div className="w-3/4" key={index} data-aos="fade-in">
             <Timeline>
               <TimelineItem
                 className="relative rounded-xl   py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5 sm:pr-4"
