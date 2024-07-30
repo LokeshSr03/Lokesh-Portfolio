@@ -206,7 +206,7 @@ export const Project = [
         ico: "/Images/skills/redux.png",
       },
     ],
-    Pgithub: "#",
+    Pgithub: "https://github.com/LokeshSr03/Rst-Store",
     Pgallery: [
       {
         imgelink: "/Images/rst-port/rst-1.png",
@@ -262,7 +262,8 @@ export const Project = [
         ico: "/Images/skills/Babel.png",
       },
     ],
-    Pgithub: "#",
+    Pgithub:
+      "https://github.com/LokeshSr03/Lokesh-Portfolio/tree/main/Lokesh-Portfolio",
     Pgallery: [
       {
         imgelink: "/Images/port/p1.png",
@@ -314,7 +315,8 @@ export const Project = [
         ico: "/Images/skills/github.png",
       },
     ],
-    Pgithub: "#",
+    Pgithub:
+      "https://github.com/LokeshSr03/E-Waste-Management-System/tree/main/E-Waste%20Management%20System/E-Waste%20Management%20System",
     Pgallery: [
       {
         imgelink: "/Images/E-waste/e1.jpg",
