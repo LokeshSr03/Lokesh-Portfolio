@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Switch } from "@material-tailwind/react";
-import { useEffect } from "react";
 import { useDarkMode } from "../global store/DarkModeContext";
 import {
   IconButton,
@@ -23,6 +22,7 @@ import { MdCastForEducation } from "react-icons/md";
 
 function Header() {
   const { DarkMode, handleDark } = useDarkMode();
+  const [isOpen, setIsOpen] = useState(false); // State to manage SpeedDial open/close
 
   useEffect(() => {
     document.body.className = DarkMode ? "dark" : "light";
@@ -73,6 +73,10 @@ function Header() {
       });
     };
   }, []);
+
+  const toggleSpeedDial = () => {
+    setIsOpen(!isOpen); // Toggle the state isOpen
+  };
 
   return (
     <>
@@ -161,19 +165,24 @@ function Header() {
           />
           <div className="relative py-6 hidden md:block z-20">
             <div className="absolute bottom-0 right-0">
-              <SpeedDial placement="bottom">
+              <SpeedDial placement="bottom" open={isOpen}>
                 <SpeedDialHandler
                   style={{
                     background: `${DarkMode ? "#31333b" : "#d9d9d9"}`,
                   }}
+                  onClick={toggleSpeedDial}
                 >
                   <IconButton size="lg" className="rounded-full">
                     <Bars3Icon
-                      className="h-5 w-5 transition-transform group-hover:hidden transition-all duration-2000"
+                      className={`h-5 w-5 transition-transform ${
+                        isOpen ? "hidden" : ""
+                      }`}
                       color={`${DarkMode ? "#fff" : "#31333b"}`}
                     />
                     <XMarkIcon
-                      className="hidden h-5 w-5 transition-transform group-hover:block transition-all duration-2000"
+                      className={`h-5 w-5 transition-transform ${
+                        isOpen ? "" : "hidden"
+                      }`}
                       color={`${DarkMode ? "#fff" : "#31333b"}`}
                     />
                   </IconButton>
