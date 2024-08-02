@@ -10,12 +10,27 @@ function Contact() {
 
   const form = useRef();
 
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     open: false,
     vertical: "top",
     horizontal: "center",
   });
   const { vertical, horizontal, open } = state;
+
+  const [formFields, setFormFields] = useState({
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormFields((prevFields) => ({ ...prevFields, [name]: value }));
+  };
+
+  const isFormValid = () => {
+    return formFields.user_name && formFields.user_email && formFields.message;
+  };
 
   const handleClick = (newState) => () => {
     setState({ ...newState, open: true });
@@ -24,6 +39,7 @@ function Contact() {
   const handleClose = () => {
     setState({ ...state, open: false });
   };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -35,12 +51,14 @@ function Contact() {
         () => {
           console.log("SUCCESS!");
           form.current.reset();
+          setFormFields({ user_name: "", user_email: "", message: "" });
         },
         (error) => {
           console.log("FAILED...", error.text);
         }
       );
   };
+
   return (
     <div
       id="contact"
@@ -68,7 +86,7 @@ function Contact() {
         </div>
 
         <form
-          className="w-3/4 max-w-[600px] flex flex-col p-8 rounded-2xl  gap-3 sm:mt-0"
+          className="w-3/4 max-w-[600px] flex flex-col p-8 rounded-2xl gap-3 sm:mt-0"
           style={{
             background: `${DarkMode ? "#171721" : "#FFFFFF"}`,
             boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
@@ -78,7 +96,7 @@ function Contact() {
         >
           <div
             id="contitle"
-            className="text-[24px] mb-[6px] font-semibold sm:text-[18px] "
+            className="text-[24px] mb-[6px] font-semibold sm:text-[18px]"
             style={{ color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}` }}
           >
             Email Me 🚀
@@ -87,11 +105,14 @@ function Contact() {
             type="text"
             placeholder="Your Name"
             name="user_name"
-            className="flex-1 bg-transparent outline-none text-[18px] rounded-xl py-3 px-4 sm:text-[12px] "
+            className="flex-1 bg-transparent outline-none text-[18px] rounded-xl py-3 px-4 sm:text-[12px]"
             style={{
               border: `1px solid ${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
               color: `${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
             }}
+            value={formFields.user_name}
+            onChange={handleInputChange}
+            required
           />
           <input
             type="email"
@@ -102,6 +123,9 @@ function Contact() {
               border: `1px solid ${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
               color: `${DarkMode ? "#F2F3F4" : "#111111"}`,
             }}
+            value={formFields.user_email}
+            onChange={handleInputChange}
+            required
           />
           <textarea
             name="message"
@@ -112,22 +136,26 @@ function Contact() {
               border: `1px solid ${DarkMode ? "#F2F3F4" + 80 : "#111111" + 80}`,
               color: `${DarkMode ? "#F2F3F4" : "#111111"}`,
             }}
+            value={formFields.message}
+            onChange={handleInputChange}
+            required
           />
 
           <Button
             onClick={handleClick({ vertical: "top", horizontal: "right" })}
             variant="gradient"
-            className="flex items-center gap-1 mt-4 bg-custom-gradient justify-center "
+            className="flex items-center gap-1 mt-4 bg-custom-gradient justify-center"
             color="blue-gray"
             type="submit"
             value="Send"
+            disabled={!isFormValid()}
           >
             <IoIosSend className="text-xl sm:text-[12px]" />
             Send
           </Button>
         </form>
         <Snackbar
-          className="z-10 mt-24  sm:mt-32"
+          className="z-10 mt-24 sm:mt-32"
           anchorOrigin={{ vertical, horizontal }}
           autoHideDuration={4000}
           open={open}
