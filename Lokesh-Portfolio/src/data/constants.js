@@ -1,6 +1,6 @@
 export const Bio = {
   name: "Lokesh Suthar",
-  role: ["Full Stack Developer", "Front End Developer", "Back End Developer"],
+  role: ["Full Stack Developer"], //, "Front End Developer", "Back End Developer"
   github: "https://github.com/LokeshSr03",
   resume:
     "https://drive.google.com/file/d/1Rj5oDV9zg1Zqvo0EqbIwsUgYofZsyFN9/view",
